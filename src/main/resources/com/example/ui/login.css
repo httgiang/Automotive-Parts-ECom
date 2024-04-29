@@ -25,7 +25,7 @@
 
     -fx-font-family: 'Poppins';
     -fx-font-style: normal;
-    -fx-font-weight: 300;
+    -fx-font-weight: 700;
     -fx-font-size: 16px;
     -fx-line-height: 24px;
     /* identical to box height */
@@ -52,8 +52,8 @@
     -fx-left: 304px;
     -fx-top: 531px;
 
-    -fx-background-color: #FFF6F4;
-    -fx-border-radius: 4px;
+    -fx-background-color: #EFF8FF;
+    -fx-border-radius: 5px 5px 5px 5px;
 }
 
 
@@ -109,15 +109,28 @@
 }
 
 #signInButton{
-
     -fx-position: absolute;
     -fx-width: 200px;
     -fx-height: 46px;
     -fx-left: 468px;
     -fx-top: 714px;
-
-    -fx-background-color: #F47458;
+    -fx-letter-spacing: 1px;
+    -fx-background-color: #272C98;
     -fx-border-radius: 30px 30px 30px 30px;
+}
+
+#logInButton{
+    -fx-position: absolute;
+    -fx-width: 200px;
+    -fx-height: 46px;
+    -fx-left: 468px;
+    -fx-top: 714px;
+    -fx-font-size: 16px;
+    -fx-text-fill: #272C98;
+    -fx-background-color: transparent;
+
+}
+#signInLabelInButton{
     -fx-font-family: 'Poppins';
     -fx-font-style: normal;
     -fx-font-weight: 600;

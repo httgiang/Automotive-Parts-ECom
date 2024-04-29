@@ -5,18 +5,28 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.SignUpController">
+<AnchorPane id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.SignUpController">
     <children>
-        <Label layoutX="70.0" layoutY="43.0" styleClass="largeLabel" stylesheets="@login.css" text="E-commerce Website" />
-        <Label id="signIn" layoutX="70.0" layoutY="97.0" stylesheets="@login.css" text="Sign up" />
-        <TextField fx:id="userEmail" layoutX="70.0" layoutY="254.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" text="Email" />
-        <Button id="signInButton" layoutX="231.0" layoutY="529.0" mnemonicParsing="false" onAction="#signUp" prefHeight="42.0" prefWidth="137.0" style="-fx-border-radius: 20px; -fx-font-weight: 700;" stylesheets="@login.css" text="SIGN UP" />
-        <Label id="normalLabel" layoutX="164.0" layoutY="617.0" style="-fx-text-fill: rgba(0, 0, 0, 0.5);" styleClass="normalLabel" stylesheets="@login.css" text="Don't have an account?" />
-        <Button layoutX="351.0" layoutY="617.0" mnemonicParsing="false" text="Log in" />
-      <TextField fx:id="userName" layoutX="70.0" layoutY="202.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" text="Full name" />
-      <TextField fx:id="mobile" layoutX="70.0" layoutY="304.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" text="Contact number" />
-      <TextField fx:id="address" alignment="TOP_LEFT" layoutX="70.0" layoutY="357.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" text="Address" />
-      <TextField fx:id="pincode" layoutX="70.0" layoutY="408.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" text="Pincode" />
-      <TextField fx:id="password" layoutX="70.0" layoutY="461.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" text="Password" />
+      <AnchorPane prefHeight="800.0" prefWidth="600.0">
+         <children>
+              <Label id="signIn" layoutX="188.0" layoutY="52.0" stylesheets="@login.css" text="Sign up" />
+              <TextField fx:id="userEmail" layoutX="70.0" layoutY="260.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" />
+              <Label id="normalLabel" layoutX="160.0" layoutY="708.0" style="-fx-text-fill: rgba(0, 0, 0, 0.5);" styleClass="normalLabel" stylesheets="@login.css" text="Already have an account?" />
+              <Button fx:id="logInButton" layoutX="356.0" layoutY="703.0" mnemonicParsing="false" text="Log in" />
+            <TextField fx:id="userName" layoutX="70.0" layoutY="185.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" />
+            <TextField fx:id="address" alignment="TOP_LEFT" layoutX="70.0" layoutY="410.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" />
+            <TextField fx:id="pincode" layoutX="70.0" layoutY="485.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" />
+            <TextField fx:id="password" layoutX="70.0" layoutY="564.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" />
+            <Label layoutX="70.0" layoutY="160.0" styleClass="normalLabel" stylesheets="@login.css" text="Name" />
+            <Label layoutX="70.0" layoutY="235.0" styleClass="normalLabel" stylesheets="@login.css" text="Email" />
+            <TextField fx:id="mobile" layoutX="70.0" layoutY="335.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" />
+            <Label layoutX="70.0" layoutY="310.0" styleClass="normalLabel" stylesheets="@login.css" text="Contact number" />
+            <Label layoutX="70.0" layoutY="385.0" styleClass="normalLabel" stylesheets="@login.css" text="Address" />
+            <Label layoutX="70.0" layoutY="460.0" styleClass="normalLabel" stylesheets="@login.css" text="Pincode" />
+            <Label layoutX="70.0" layoutY="535.0" styleClass="normalLabel" stylesheets="@login.css" text="Password" />
+              <Button id="signInButton" fx:id="signUpButton" layoutX="218.0" layoutY="642.0" mnemonicParsing="false" onAction="#signUp" prefHeight="42.0" prefWidth="140.0" style="-fx-font-weight: 700; -fx-font-size: 16px; -fx-border-radius: 23px;" stylesheets="@login.css" text="SIGN UP" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="600.0" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: EFF8FF;" />
     </children>
 </AnchorPane>
