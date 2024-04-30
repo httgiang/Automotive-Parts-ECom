@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20258a6c-0b47-43f7-abf6-04a25cecf102" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/SignUpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/signUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/signUp.fxml" afterDir="false" />
     </list>
@@ -17,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -100,7 +102,7 @@
       <workItem from="1714315738970" duration="1654000" />
       <workItem from="1714369152886" duration="896000" />
       <workItem from="1714379845904" duration="899000" />
-      <workItem from="1714381349385" duration="9083000" />
+      <workItem from="1714381349385" duration="19113000" />
     </task>
     <servers />
   </component>
