@@ -16,7 +16,6 @@
 }
 
 .normalLabel{
-
     -fx-position: absolute;
     -fx-width: 43px;
     -fx-height: 24px;
@@ -31,8 +30,8 @@
     /* identical to box height */
 
     -fx-color: #000000;
-
 }
+
 .normalText{
     -fx-font-family: 'Poppins';
     -fx-font-style: normal;
@@ -55,7 +54,6 @@
     -fx-background-color: #EFF8FF;
     -fx-border-radius: 5px 5px 5px 5px;
 }
-
 
 
 #anchorPane{
@@ -90,8 +88,6 @@
 }
 
 #signIn{
-    /* Sing in */
-
     -fx-position: absolute;
     -fx-width: 191px;
     -fx-height: 84px;
@@ -164,8 +160,8 @@
 
 }
 
-#signUpButton{
-    #signInButton{
+
+    #signUpButton{
         -fx-position: absolute;
         -fx-width: 200px;
         -fx-height: 46px;
@@ -184,4 +180,3 @@
 
         -fx-text-fill: #FFFFFF;
     }
-}

@@ -2,10 +2,15 @@ package com.example.ui;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import javax.swing.*;
@@ -62,6 +67,8 @@ public class SignUpController {
     @FXML
     private AnchorPane logInPane;
 
+    private Stage stage;
+    private Scene scene;
     @FXML
     private void switchForm(ActionEvent event) {
         TranslateTransition slider = new TranslateTransition();
@@ -91,7 +98,7 @@ public class SignUpController {
     private Alert alert;
 
     @FXML
-    public void logIn(){
+    public void logIn(ActionEvent event){
         if(li_userEmail.getText().isEmpty() || li_password.getText().isEmpty()){
             alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error Message");
@@ -112,6 +119,7 @@ public class SignUpController {
                     alert.setHeaderText(null);
                     alert.setContentText("Successfully login!");
                     alert.showAndWait();
+                    switchToHomePage(event);
                 } else {
                     alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Error Message");
@@ -122,8 +130,19 @@ public class SignUpController {
             } catch (Exception e){
                 e.printStackTrace();
             }
+        }
+    }
 
-
+    public void switchToHomePage(ActionEvent event){
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(Exception e){
+            e.printStackTrace();
         }
     }
     @FXML
