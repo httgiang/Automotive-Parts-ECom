@@ -16,10 +16,10 @@
             <TextField fx:id="li_password" layoutX="70.0" layoutY="445.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" />
             <Label layoutX="70.0" layoutY="329.0" styleClass="normalLabel" stylesheets="@login.css" text="Email" />
             <Label layoutX="70.0" layoutY="419.0" styleClass="normalLabel" stylesheets="@login.css" text="Password" />
-            <Button fx:id="li_logInButton" layoutX="224.0" layoutY="526.0" mnemonicParsing="false" onAction="#logIn" prefHeight="42.0" prefWidth="140.0" style="-fx-font-weight: 700; -fx-font-size: 16px; -fx-border-radius: 23px;" text="LOG IN" textFill="WHITE" textOverrun="CLIP" />
+            <Button fx:id="li_logInButton" layoutX="224.0" layoutY="526.0" mnemonicParsing="false" onAction="#logIn" prefHeight="42.0" prefWidth="140.0" style="-fx-font-weight: 700; -fx-font-size: 16px; -fx-border-radius: 23px;" text="LOG IN" textFill="WHITE" />
             <Label layoutX="56.0" layoutY="147.0" />
             <Label layoutX="63.0" layoutY="138.0" styleClass="largeLabel" text="Welcome back!" />
-            <Button fx:id="forgotPassword" layoutX="399.0" layoutY="415.0" mnemonicParsing="false" text="Forgot password?" />
+            <Button fx:id="forgotPassword" layoutX="383.0" layoutY="415.0" mnemonicParsing="false" text="Forgot password?" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="signUpPane" layoutX="600.0" prefHeight="800.0" prefWidth="600.0">

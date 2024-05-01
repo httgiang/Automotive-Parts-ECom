@@ -1,0 +1,27 @@
+.label{
+    -fx-position: absolute;
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-size: 20px;
+    -fx-line-height: 84px;
+    -fx-font-weight: 700;
+    -fx-text-fill: rgba(0, 0, 0, 0.63);
+}
+
+.textField{
+
+}
+
+#clickedButton{
+    -fx-background-color:white;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-font-size: 16px;
+    -fx-line-height: 54px;
+    -fx-text-align: center;
+    -fx-text-fill: black;
+    -fx-padding: 5px;
+}
