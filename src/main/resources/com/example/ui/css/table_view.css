@@ -1,0 +1,22 @@
+.table-view{
+    -fx-background-color:#FFFFFF ;
+}
+#Action, #NameColumn, #DateColumn,#PatientContactNumber, #DescriptionColumn, #AdditionalNoteColumn, #MoneyPayColumn, #laboratoryIdColumn, #contactNumberColumn, #AddressPatient, #QuantityColumn, #DateLaboColumn, #PatientName{
+    -fx-font-size: 17;
+}
+.table-view .column-header{
+    -fx-background-color: #add3d3;
+    -fx-text-fill: white;
+}
+.table-view .column-header-background{
+    -fx-background-color: transparent;
+}
+.table-view .column-header-background.label{
+    -fx-text-fill: white;
+}
+.table-row-cell{
+    -fx-background-color: white;
+}
+.table-row-cell-odd{
+    -fx-background-color:#F7F6FE;
+}
