@@ -1,0 +1,49 @@
+.anchorPane{
+    -fx-max-width:680px;
+    -fx-max-height: 543px;
+    -fx-background-color: #F3F8FE;
+    -fx-border-radius: 5px 5px 5px 5px;
+    -fx-border-color: #C1BEBE;
+}
+.largeLabel{
+    -fx-position: absolute;
+    -fx-left: 305px;
+    -fx-top: 240px;
+
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-font-size: 27px;
+    -fx-line-height: 54px;
+
+    -fx-text-fill: #606060;
+}
+
+.normalLabel{
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-font-size: 17px;
+    -fx-line-height: 20px;
+
+    -fx-text-fill: #777272;
+}
+
+.resetButton{
+    -fx-border-collapse: separate;
+    -fx-border-radius: 7px;
+    -fx-border-color: #D66E68;
+    -fx-background-color: #E26058;
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-font-size: 18px;
+}
+.AddButton{
+    -fx-border-collapse: separate;
+    -fx-border-radius: 7px;
+    -fx-border-color: #517B55;
+    -fx-background-color: #517B55;
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-font-size: 18px;
+}

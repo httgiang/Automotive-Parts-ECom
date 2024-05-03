@@ -10,7 +10,6 @@
     -fx-font-weight: 700;
     -fx-font-size: 36px;
     -fx-line-height: 54px;
-    /* identical to box height */
 
     -fx-text-fill: #272C98;
 }
@@ -25,7 +24,6 @@
     -fx-font-weight: 700;
     -fx-font-size: 16px;
     -fx-line-height: 24px;
-    /* identical to box height */
 
     -fx-text-fill: #000000;
 }
@@ -36,7 +34,6 @@
     -fx-font-weight: 400;
     -fx-font-size: 14px;
     -fx-line-height: 21px;
-    /* identical to box height */
 
     -fx-text-fill: #000000;
 
@@ -78,7 +75,6 @@
     -fx-font-weight: 400;
     -fx-font-size: 16px;
     -fx-line-height: 22px;
-    /* identical to box height, or 138% */
     -fx-letter-spacing: 0.03em;
 
     -fx-text-fill: rgba(0, 0, 0, 0.5);

@@ -17,7 +17,6 @@ import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ResourceBundle;
 
 public class SignUpController {
     private String userEmail;
@@ -107,7 +106,7 @@ public class SignUpController {
             alert.setContentText("Please enter your email and password!");
             alert.showAndWait();
         } else {
-            con = MySQLConnection.connectDb();
+            con = SQLConnection.connectDb();
             String select = "SELECT email, password FROM USERS WHERE email = ? AND password = ?";
             try{
                 pst = con.prepareStatement(select);
@@ -157,7 +156,7 @@ public class SignUpController {
             alert.setContentText("Please fill in all the blank fields!");
             alert.showAndWait();
         } else {
-            con = MySQLConnection.connectDb();
+            con = SQLConnection.connectDb();
             String insert = "INSERT INTO USERS(name, email, mobile, address, pincode, password) VALUES(?,?,?,?,?,?)";
             try {
                 pst = con.prepareStatement(insert);

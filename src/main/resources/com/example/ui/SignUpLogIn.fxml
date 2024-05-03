@@ -10,10 +10,10 @@
       <AnchorPane fx:id="logInPane" prefHeight="800.0" prefWidth="600.0">
          <children>
             <Label id="signIn" contentDisplay="CENTER" layoutX="70.0" layoutY="221.0" stylesheets="@css/login.css" text="Login" />
-            <TextField fx:id="li_userEmail" layoutX="70.0" layoutY="355.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" />
+            <TextField fx:id="li_userEmail" layoutX="70.0" layoutY="355.0" prefHeight="35.0" prefWidth="460.0" promptText="Email" styleClass="textField" />
             <Label id="normalLabel" layoutX="164.0" layoutY="599.0" style="-fx-text-fill: rgba(0, 0, 0, 0.5);" styleClass="normalLabel" stylesheets="@css/login.css" text="Don't have an account?" />
             <Button fx:id="li_signUpButton" layoutX="340.0" layoutY="593.0" mnemonicParsing="false" onAction="#switchForm" text="Sign up" />
-            <TextField fx:id="li_password" layoutX="70.0" layoutY="445.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" />
+            <TextField fx:id="li_password" layoutX="70.0" layoutY="445.0" prefHeight="35.0" prefWidth="460.0" promptText="Password" styleClass="textField" />
             <Label layoutX="70.0" layoutY="329.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Email" />
             <Label layoutX="70.0" layoutY="419.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Password" />
             <Button fx:id="li_logInButton" layoutX="224.0" layoutY="526.0" mnemonicParsing="false" onAction="#logIn" prefHeight="42.0" prefWidth="140.0" style="-fx-font-weight: 700; -fx-font-size: 16px; -fx-border-radius: 23px;" text="LOG IN" textFill="WHITE" />
@@ -25,16 +25,16 @@
       <AnchorPane fx:id="signUpPane" layoutX="600.0" prefHeight="800.0" prefWidth="600.0">
          <children>
               <Label id="signIn" layoutX="70.0" layoutY="58.0" stylesheets="@css/login.css" text="Sign up" />
-              <TextField fx:id="su_userEmail" layoutX="70.0" layoutY="260.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" />
+              <TextField fx:id="su_userEmail" layoutX="70.0" layoutY="260.0" prefHeight="35.0" prefWidth="460.0" promptText="Email" styleClass="textField" />
               <Label id="normalLabel" layoutX="160.0" layoutY="708.0" style="-fx-text-fill: rgba(0, 0, 0, 0.5);" styleClass="normalLabel" stylesheets="@css/login.css" text="Already have an account?" />
               <Button fx:id="su_logInButton" layoutX="356.0" layoutY="703.0" mnemonicParsing="false" onAction="#switchForm" text="Log in" />
-            <TextField fx:id="userName" layoutX="70.0" layoutY="185.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" />
-            <TextField fx:id="address" layoutX="70.0" layoutY="410.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" />
-            <TextField fx:id="pincode" layoutX="70.0" layoutY="485.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" />
-            <TextField fx:id="su_password" layoutX="70.0" layoutY="564.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" />
+            <TextField fx:id="userName" layoutX="70.0" layoutY="185.0" prefHeight="35.0" prefWidth="460.0" promptText="Full name" styleClass="textField" />
+            <TextField fx:id="address" layoutX="70.0" layoutY="410.0" prefHeight="35.0" prefWidth="460.0" promptText="Address" styleClass="textField" />
+            <TextField fx:id="pincode" layoutX="70.0" layoutY="485.0" prefHeight="35.0" prefWidth="460.0" promptText="Pincode" styleClass="textField" />
+            <TextField fx:id="su_password" layoutX="70.0" layoutY="564.0" prefHeight="35.0" prefWidth="460.0" promptText="Password" styleClass="textField" />
             <Label layoutX="70.0" layoutY="160.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Name" />
             <Label layoutX="70.0" layoutY="235.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Email" />
-            <TextField fx:id="mobile" layoutX="70.0" layoutY="335.0" prefHeight="35.0" prefWidth="460.0" styleClass="textField" />
+            <TextField fx:id="mobile" layoutX="70.0" layoutY="335.0" prefHeight="35.0" prefWidth="460.0" promptText="Mobile" styleClass="textField" />
             <Label layoutX="70.0" layoutY="310.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Contact number" />
             <Label layoutX="70.0" layoutY="385.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Address" />
             <Label layoutX="70.0" layoutY="460.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Pincode" />
