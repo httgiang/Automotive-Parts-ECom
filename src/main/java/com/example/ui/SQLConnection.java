@@ -4,7 +4,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import javax.swing.*;
 
-public class MySQLConnection {
+public class SQLConnection {
     static Connection con = null;
     public static Connection connectDb(){
         String url = "jdbc:sqlserver://DESKTOP-F6P99QD;databaseName=ECommerceWebsite;encrypt=true;trustServerCertificate=true";

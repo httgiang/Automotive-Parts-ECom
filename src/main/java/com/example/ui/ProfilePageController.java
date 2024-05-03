@@ -23,7 +23,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
-public class ProfilePageController {
+public class ProfilePageController extends MenuBarMethods {
     @FXML
     private Button homeButton;
 
@@ -54,7 +54,7 @@ public class ProfilePageController {
 
     private void showUserInformation(String userEmail){
         try {
-            Connection con = MySQLConnection.connectDb();
+            Connection con = SQLConnection.connectDb();
             String sql = "SELECT * FROM USERS WHERE email = ?";
             assert con != null;
             PreparedStatement pst = con.prepareStatement(sql);
