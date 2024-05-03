@@ -1,0 +1,84 @@
+#menuBar{
+    -fx-background-color: #000000;
+    -fx-pref-width: 1200px;
+    -fx-pref-height: 50px;
+}
+#mainBar{
+    -fx-background-color: #61A6CD;
+    -fx-pref-width: 1200px;
+    -fx-pref-height: 150px;
+}
+#mainPane{
+    -fx-background-color: #F0FAFB;
+    -fx-pref-width: 1200px;
+    -fx-pref-height: 600px;
+}
+.menuButton{
+    -fx-background-color:transparent;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-font-size: 16px;
+    -fx-line-height: 54px;
+    -fx-text-align: center;
+    -fx-text-fill: #FFFFFF;
+}
+
+.menuLabel{
+    -fx-position: absolute;
+    -fx-width: 48px;
+    -fx-height: 24px;
+    -fx-left: 305px;
+    -fx-top: 240px;
+
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-font-size: 16px;
+    -fx-line-height: 54px;
+    -fx-text-align: center;
+    -fx-text-fill: #FFFFFF;
+}
+
+.moused-moved:hover{
+    -fx-background-color: #E4E4E4;
+}
+#WebsiteName{
+    -fx-position: absolute;
+    -fx-width: 181px;
+    -fx-height: 54px;
+    -fx-left: 305px;
+    -fx-top: 240px;
+
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-font-size: 36px;
+    -fx-line-height: 54px;
+
+    -fx-text-fill: #FFFFFF;
+}
+
+#message{
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-font-size: 14px;
+    -fx-line-height: 54px;
+
+    -fx-text-fill: #FFFFFF;
+}
+
+#searchBar{
+    -fx-pref-width: 380px;
+    -fx-pref-height: 27px;
+    -fx-background-color: white;
+    -fx-border-radius: 5px
+}
+
+#searchButton{
+    -fx-pref-height: 27px;
+    -fx-background-color: #FDDD36;
+}
