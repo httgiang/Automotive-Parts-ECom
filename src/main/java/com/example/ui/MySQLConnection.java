@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import javax.swing.*;
 
 public class MySQLConnection {
-    Connection con = null;
+    static Connection con = null;
     public static Connection connectDb(){
         String url = "jdbc:sqlserver://DESKTOP-F6P99QD;databaseName=ECommerceWebsite;encrypt=true;trustServerCertificate=true";
         String user = "sa";
@@ -20,6 +20,14 @@ public class MySQLConnection {
             e.printStackTrace();
             JOptionPane.showMessageDialog(null, e);
             return null;
+        } finally {
+            if (con != null) {
+                try {
+                    con.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 

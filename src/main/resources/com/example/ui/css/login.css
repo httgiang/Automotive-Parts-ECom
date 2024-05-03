@@ -17,8 +17,6 @@
 
 .normalLabel{
     -fx-position: absolute;
-    -fx-width: 43px;
-    -fx-height: 24px;
     -fx-left: 304px;
     -fx-top: 500px;
 
@@ -29,7 +27,7 @@
     -fx-line-height: 24px;
     /* identical to box height */
 
-    -fx-color: #000000;
+    -fx-text-fill: #000000;
 }
 
 .normalText{

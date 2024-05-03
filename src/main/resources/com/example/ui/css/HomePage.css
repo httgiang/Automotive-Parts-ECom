@@ -42,6 +42,9 @@
     -fx-text-fill: #FFFFFF;
 }
 
+.moused-moved:hover{
+    -fx-background-color: #E4E4E4;
+}
 #WebsiteName{
     -fx-position: absolute;
     -fx-width: 181px;
@@ -77,5 +80,5 @@
 
 #searchButton{
     -fx-pref-height: 27px;
-    -fx-background-color: FDDD36;
+    -fx-background-color: #FDDD36;
 }

@@ -20,6 +20,7 @@ import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
 public class SignUpController {
+    private String userEmail;
 
     @FXML
     private TextField address;
@@ -114,6 +115,7 @@ public class SignUpController {
                 pst.setString(2, li_password.getText());
                 rs = pst.executeQuery();
                 if(rs.next()){
+                    userEmail = li_userEmail.getText();
                     alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Information Message");
                     alert.setHeaderText(null);
@@ -172,6 +174,10 @@ public class SignUpController {
                 JOptionPane.showMessageDialog(null, e);
             }
         }
+    }
+
+    public String getUserEmail() {
+        return userEmail;
     }
 }
 
