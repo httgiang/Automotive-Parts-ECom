@@ -12,8 +12,6 @@ import javafx.stage.Stage;
 import java.awt.*;
 
 public class OrderController extends MenuBarMethods{
-    @FXML
-    private Button cartButton;
 
     @FXML
     private TableColumn<?, ?> colOID;
@@ -32,24 +30,5 @@ public class OrderController extends MenuBarMethods{
 
     @FXML
     private TableColumn<?, ?> colTime;
-
-    @FXML
-    private Button homeButton;
-
-    @FXML
-    private Button logOutButton;
-
-    @FXML
-    private Button orderButton;
-
-    @FXML
-    private Button profileButton;
-
-    @FXML
-    private TextField searchBar;
-
-    @FXML
-    private Button searchButton;
-
 
 }
