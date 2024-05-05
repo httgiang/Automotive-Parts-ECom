@@ -12,16 +12,16 @@ import java.awt.*;
 
 public class PaymentController extends MenuBarMethods{
     @FXML
-    private TextField txt_CVV;
+    private javafx.scene.control.TextField txt_CVV;
 
     @FXML
-    private TextField txt_ExDate;
+    private javafx.scene.control.TextField txt_ExDate;
 
     @FXML
-    private TextField txt_cardFName;
+    private javafx.scene.control.TextField txt_cardFName;
 
     @FXML
-    private TextField txt_cardLName;
+    private javafx.scene.control.TextField txt_cardLName;
     private Stage stage;
     private Scene scene;
     @FXML

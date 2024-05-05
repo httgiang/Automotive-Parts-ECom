@@ -24,27 +24,6 @@ public class StockController extends MenuBarMethods {
     @FXML
     private Button addProductButton;
 
-    @FXML
-    private Button cartButton;
-
-    @FXML
-    private Button homeButton;
-
-    @FXML
-    private Button logOutButton;
-
-    @FXML
-    private Button orderButton;
-
-    @FXML
-    private Button profileButton;
-
-    @FXML
-    private TextField searchBar;
-
-    @FXML
-    private Button searchButton;
-
 
     @FXML
     void switchToAddNewProduct(ActionEvent event) {
