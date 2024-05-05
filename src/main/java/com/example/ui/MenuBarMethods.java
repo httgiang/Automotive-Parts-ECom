@@ -9,8 +9,22 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public abstract class MenuBarMethods {
-    private Stage stage;
-    private Scene scene;
+    private static Stage stage;
+    private static Scene scene;
+
+    @FXML
+    public void switchToHome(ActionEvent event){
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
     @FXML
     public void switchToProfile(ActionEvent event){
         try {

@@ -1,47 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.SignUpController">
+<AnchorPane id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: aliceblue;" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.SignUpController">
     <children>
-      <AnchorPane fx:id="logInPane" prefHeight="800.0" prefWidth="600.0">
-         <children>
-            <Label id="signIn" contentDisplay="CENTER" layoutX="70.0" layoutY="221.0" stylesheets="@css/login.css" text="Login" />
-            <TextField fx:id="li_userEmail" layoutX="70.0" layoutY="355.0" prefHeight="35.0" prefWidth="460.0" promptText="Email" styleClass="textField" />
-            <Label id="normalLabel" layoutX="164.0" layoutY="599.0" style="-fx-text-fill: rgba(0, 0, 0, 0.5);" styleClass="normalLabel" stylesheets="@css/login.css" text="Don't have an account?" />
-            <Button fx:id="li_signUpButton" layoutX="340.0" layoutY="593.0" mnemonicParsing="false" onAction="#switchForm" text="Sign up" />
-            <TextField fx:id="li_password" layoutX="70.0" layoutY="445.0" prefHeight="35.0" prefWidth="460.0" promptText="Password" styleClass="textField" />
-            <Label layoutX="70.0" layoutY="329.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Email" />
-            <Label layoutX="70.0" layoutY="419.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Password" />
-            <Button fx:id="li_logInButton" layoutX="224.0" layoutY="526.0" mnemonicParsing="false" onAction="#logIn" prefHeight="42.0" prefWidth="140.0" style="-fx-font-weight: 700; -fx-font-size: 16px; -fx-border-radius: 23px;" text="LOG IN" textFill="WHITE" />
-            <Label layoutX="56.0" layoutY="147.0" />
-            <Label layoutX="63.0" layoutY="138.0" styleClass="largeLabel" text="Welcome back!" />
-            <Button fx:id="forgotPassword" layoutX="383.0" layoutY="415.0" mnemonicParsing="false" text="Forgot password?" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="signUpPane" layoutX="600.0" prefHeight="800.0" prefWidth="600.0">
-         <children>
-              <Label id="signIn" layoutX="70.0" layoutY="58.0" stylesheets="@css/login.css" text="Sign up" />
-              <TextField fx:id="su_userEmail" layoutX="70.0" layoutY="260.0" prefHeight="35.0" prefWidth="460.0" promptText="Email" styleClass="textField" />
-              <Label id="normalLabel" layoutX="160.0" layoutY="708.0" style="-fx-text-fill: rgba(0, 0, 0, 0.5);" styleClass="normalLabel" stylesheets="@css/login.css" text="Already have an account?" />
-              <Button fx:id="su_logInButton" layoutX="356.0" layoutY="703.0" mnemonicParsing="false" onAction="#switchForm" text="Log in" />
-            <TextField fx:id="userName" layoutX="70.0" layoutY="185.0" prefHeight="35.0" prefWidth="460.0" promptText="Full name" styleClass="textField" />
-            <TextField fx:id="address" layoutX="70.0" layoutY="410.0" prefHeight="35.0" prefWidth="460.0" promptText="Address" styleClass="textField" />
-            <TextField fx:id="pincode" layoutX="70.0" layoutY="485.0" prefHeight="35.0" prefWidth="460.0" promptText="Pincode" styleClass="textField" />
-            <TextField fx:id="su_password" layoutX="70.0" layoutY="564.0" prefHeight="35.0" prefWidth="460.0" promptText="Password" styleClass="textField" />
-            <Label layoutX="70.0" layoutY="160.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Name" />
-            <Label layoutX="70.0" layoutY="235.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Email" />
-            <TextField fx:id="mobile" layoutX="70.0" layoutY="335.0" prefHeight="35.0" prefWidth="460.0" promptText="Mobile" styleClass="textField" />
-            <Label layoutX="70.0" layoutY="310.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Contact number" />
-            <Label layoutX="70.0" layoutY="385.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Address" />
-            <Label layoutX="70.0" layoutY="460.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Pincode" />
-            <Label layoutX="70.0" layoutY="535.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Password" />
-              <Button fx:id="su_signUpButton" layoutX="218.0" layoutY="642.0" mnemonicParsing="false" onAction="#signUp" prefHeight="42.0" prefWidth="140.0" style="-fx-font-weight: 700; -fx-font-size: 16px; -fx-border-radius: 23px;" text="SIGN UP" textFill="WHITE" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="sideForm" layoutX="600.0" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: EFF8FF;" />
+        <AnchorPane fx:id="logInPane" layoutX="300.0" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: white;">
+            <children>
+                <Label id="signIn" contentDisplay="CENTER" layoutX="70.0" layoutY="221.0" stylesheets="@css/login.css" text="Login" />
+                <TextField fx:id="li_userEmail" layoutX="70.0" layoutY="355.0" prefHeight="35.0" prefWidth="460.0" promptText="Email" styleClass="textField" />
+                <Label id="normalLabel" layoutX="174.0" layoutY="593.0" style="-fx-text-fill: rgba(0, 0, 0, 0.5);" styleClass="normalLabel" stylesheets="@css/login.css" text="Don't have an account?" />
+                <Button fx:id="li_signUpButton" layoutX="350.0" layoutY="587.0" mnemonicParsing="false" onAction="#switchForm" text="Sign up" />
+                <TextField fx:id="li_password" layoutX="70.0" layoutY="445.0" prefHeight="35.0" prefWidth="460.0" promptText="Password" styleClass="textField" />
+                <Label layoutX="70.0" layoutY="329.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Email" />
+                <Label layoutX="70.0" layoutY="419.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Password" />
+                <Button fx:id="li_logInButton" layoutX="175.0" layoutY="526.0" mnemonicParsing="false" onAction="#logIn" prefHeight="42.0" prefWidth="140.0" style="-fx-font-weight: 700; -fx-font-size: 16px; -fx-border-radius: 23px;" text="LOG IN" textFill="WHITE" />
+                <Label layoutX="56.0" layoutY="147.0" />
+                <Label layoutX="63.0" layoutY="138.0" styleClass="largeLabel" text="Welcome back!" />
+                <Button fx:id="forgotPassword" layoutX="393.0" layoutY="413.0" mnemonicParsing="false" text="Forgot password?" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="signUpPane" layoutX="114.0" layoutY="7.0" prefHeight="800.0" prefWidth="953.0" style="-fx-background-color: white;" visible="false">
+            <children>
+                <Label id="signIn" layoutX="51.0" layoutY="60.0" prefWidth="800.0" stylesheets="@css/login.css" text="Sign up" />
+                <TextField fx:id="su_userEmail" layoutX="65.0" layoutY="260.0" prefHeight="35.0" prefWidth="400.0" promptText="Email" styleClass="textField" />
+                <Label id="normalLabel" layoutX="381.0" layoutY="658.0" style="-fx-text-fill: rgba(0, 0, 0, 0.5);" styleClass="normalLabel" stylesheets="@css/login.css" text="Already have an account?" />
+                <Button fx:id="su_logInButton" layoutX="574.0" layoutY="653.0" mnemonicParsing="false" onAction="#switchForm" text="Log in" />
+                <TextField fx:id="userName" layoutX="65.0" layoutY="185.0" prefHeight="35.0" prefWidth="400.0" promptText="Full name" styleClass="textField" />
+                <TextField fx:id="address" layoutX="502.0" layoutY="334.0" prefHeight="35.0" prefWidth="400.0" promptText="Address" styleClass="textField" visible="false" />
+                <TextField fx:id="pincode" layoutX="502.0" layoutY="257.0" prefHeight="35.0" prefWidth="400.0" promptText="Pincode" styleClass="textField" />
+                <TextField fx:id="su_password" layoutX="65.0" layoutY="413.0" prefHeight="35.0" prefWidth="400.0" promptText="Password" styleClass="textField" />
+                <Label layoutX="65.0" layoutY="160.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Name" />
+                <Label layoutX="65.0" layoutY="235.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Email" />
+                <TextField fx:id="mobile" layoutX="502.0" layoutY="185.0" prefHeight="35.0" prefWidth="400.0" promptText="Mobile" styleClass="textField" />
+                <Label layoutX="502.0" layoutY="160.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Contact number" />
+                <Label fx:id="addressLabel" layoutX="502.0" layoutY="308.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Address" visible="false" />
+                <Label layoutX="502.0" layoutY="235.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Pincode" />
+                <Label layoutX="68.0" layoutY="387.0" styleClass="normalLabel" stylesheets="@css/login.css" text="Password" />
+                <Button fx:id="su_signUpButton" layoutX="376.0" layoutY="594.0" mnemonicParsing="false" onAction="#signUp" prefHeight="42.0" prefWidth="140.0" style="-fx-font-weight: 700; -fx-font-size: 16px; -fx-border-radius: 23px;" text="SIGN UP" textFill="WHITE" />
+            <Label layoutX="67.0" layoutY="308.0" styleClass="normalLabel" text="Type" />
+            <ComboBox fx:id="typeBox" layoutX="65.0" layoutY="334.0" onAction="#selectType" prefHeight="35.0" prefWidth="400.0" promptText="Choose Type" styleClass="textField" />
+            <Label fx:id="shopInfoLabel" layoutX="502.0" layoutY="308.0" styleClass="normalLabel" text="Shop's information" visible="false" />
+            <TextField fx:id="shopInfo" layoutX="502.0" layoutY="334.0" prefHeight="35.0" prefWidth="400.0" promptText="Information of your shop" styleClass="textField" visible="false" />
+            <Label fx:id="labelBankAcc" layoutX="502.0" layoutY="386.0" prefHeight="26.0" prefWidth="110.0" styleClass="normalLabel" text="Bank account" visible="false" />
+            <TextField fx:id="bankAcc" layoutX="502.0" layoutY="413.0" prefHeight="35.0" prefWidth="400.0" promptText="Bank account number" styleClass="textField" visible="false" />
+            <Label layoutX="68.0" layoutY="468.0" styleClass="normalLabel" text="Confirm password" />
+            <TextField fx:id="confirmPassword" layoutX="68.0" layoutY="494.0" prefHeight="35.0" prefWidth="400.0" promptText="Reenter password" styleClass="textField" />
+            </children>
+        </AnchorPane>
     </children>
 </AnchorPane>

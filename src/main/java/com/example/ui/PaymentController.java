@@ -8,7 +8,20 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.awt.*;
+
 public class PaymentController extends MenuBarMethods{
+    @FXML
+    private TextField txt_CVV;
+
+    @FXML
+    private TextField txt_ExDate;
+
+    @FXML
+    private TextField txt_cardFName;
+
+    @FXML
+    private TextField txt_cardLName;
     private Stage stage;
     private Scene scene;
     @FXML

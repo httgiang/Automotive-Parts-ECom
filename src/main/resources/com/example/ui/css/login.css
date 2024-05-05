@@ -97,15 +97,18 @@
     -fx-text-fill: #000000;
 }
 
-#su_signUpButton, #li_logInButton{
-    -fx-position: absolute;
-    -fx-width: 200px;
-    -fx-height: 46px;
-    -fx-left: 468px;
-    -fx-top: 714px;
-    -fx-letter-spacing: 1px;
+#su_signUpButton, #li_logInButton {
     -fx-background-color: #272C98;
-    -fx-border-radius: 30px 30px 30px 30px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 27px;
+    -fx-min-width: 250px;
+    -fx-max-width: 250px;
+    -fx-min-height: 40px;
+    -fx-max-height: 40px;
+    -fx-background-radius: 40px 40px 40px 40px;
+    -fx-opacity: 10;
+    -fx-gap: 10;
 }
 
 #su_logInButton, #li_signUpButton{
