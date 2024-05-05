@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class CartController extends MenuBarMethods{
+
     private Stage stage;
     private Scene scene;
     @FXML

@@ -239,7 +239,6 @@ public class SignUpController{
             labelBankAcc.setVisible(true);
             bankAcc.setVisible(true);
         }
-
     }
     @FXML
     public void initialize(){

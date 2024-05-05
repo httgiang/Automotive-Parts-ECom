@@ -73,12 +73,12 @@
             <children>
                 <TableView layoutX="64.0" layoutY="57.0" prefHeight="491.0" prefWidth="1062.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
                     <columns>
-                        <TableColumn prefWidth="100.0" text="Picture" />
-                        <TableColumn prefWidth="310.0" text="Product" />
-                        <TableColumn prefWidth="190.0" text="Order ID" />
-                        <TableColumn prefWidth="145.0" text="Price" />
-                        <TableColumn prefWidth="145.0" text="Time" />
-                        <TableColumn prefWidth="168.0" text="Status" />
+                        <TableColumn fx:id="colPicture" prefWidth="100.0" text="Picture" />
+                        <TableColumn fx:id="colProduct" prefWidth="310.0" text="Product" />
+                        <TableColumn fx:id="colOID" prefWidth="190.0" text="Order ID" />
+                        <TableColumn fx:id="colPrice" prefWidth="145.0" text="Price" />
+                        <TableColumn fx:id="colTime" prefWidth="145.0" text="Time" />
+                        <TableColumn fx:id="colStatus" prefWidth="168.0" text="Status" />
                     </columns>
                 </TableView>
                 <Label layoutX="507.0" layoutY="7.0" styleClass="largeLabel" stylesheets="@css/table_view.css" text="Order Details" />

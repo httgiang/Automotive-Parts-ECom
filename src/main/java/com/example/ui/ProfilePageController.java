@@ -18,6 +18,7 @@ import javafx.util.Duration;
 
 import javax.swing.*;
 import javax.swing.text.html.ImageView;
+import java.awt.*;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -54,7 +55,7 @@ public class ProfilePageController extends MenuBarMethods {
     private Button searchButton;
 
     @FXML
-    private TextField txt_address;
+    private TextArea txt_address;
 
     @FXML
     private TextField txt_bank;
@@ -63,7 +64,7 @@ public class ProfilePageController extends MenuBarMethods {
     private TextField txt_email;
 
     @FXML
-    private TextField txt_info;
+    private TextArea txt_info;
 
     @FXML
     private TextField txt_mobile;
