@@ -9,7 +9,13 @@
 }
 
 .textField{
-
+    -fx-background-color: white;
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-size: 18px;
+    -fx-line-height: 84px;
+    -fx-font-weight: 400;
+    -fx-text-fill: #000000;
 }
 
 #clickedButton{
@@ -24,4 +30,20 @@
     -fx-text-align: center;
     -fx-text-fill: black;
     -fx-padding: 5px;
+}
+
+#updateButton
+{
+    -fx-background-color: lightgreen;
+    -fx-text-fill: green;
+    -fx-font-weight: bold;
+    -fx-font-size: 22px;
+    -fx-min-width: 250px;
+    -fx-max-width: 250px;
+    -fx-min-height: 40px;
+    -fx-max-height: 40px;
+    -fx-padding: 4px 33px, 4px 33px;
+    -fx-background-radius: 40px 40px 40px 40px;
+    -fx-opacity: 10;
+    -fx-gap: 10;
 }

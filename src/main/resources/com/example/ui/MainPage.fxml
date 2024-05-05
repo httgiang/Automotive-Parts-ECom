@@ -11,9 +11,9 @@
     <children>
         <AnchorPane id="menuBar" prefHeight="50.0" prefWidth="1200.0" stylesheets="@css/HomePage.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <Button layoutY="6.0" mnemonicParsing="false" styleClass="menuButton">
+                <Button fx:id="homeButton" layoutY="6.0" mnemonicParsing="false" onAction="#switchToHome" styleClass="menuButton">
                     <graphic>
-                        <ImageView fx:id="homeButton" fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../pictures/Home Page.png" />
                             </image>

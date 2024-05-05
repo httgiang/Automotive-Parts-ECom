@@ -1,31 +1,48 @@
 package com.example.ui;
-import javafx.animation.TranslateTransition;
+
+
+import com.example.ui.Entity.User;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javafx.util.Duration;
-
 import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
-public class SignUpController {
-    private String userEmail;
-
+public class SignUpController{
+    Connection con = null;
+    ResultSet rs = null;
+    PreparedStatement pst = null;
+    private Alert alert;
+    private Stage stage;
+    private Scene scene;
     @FXML
     private TextField address;
 
     @FXML
+    private Label addressLabel;
+
+    @FXML
+    private TextField bankAcc;
+
+    @FXML
+    private TextField confirmPassword;
+
+    @FXML
     private Button forgotPassword;
+
+    @FXML
+    private Label labelBankAcc;
 
     @FXML
     private Button li_logInButton;
@@ -40,10 +57,22 @@ public class SignUpController {
     private TextField li_userEmail;
 
     @FXML
+    private AnchorPane logInPane;
+
+    @FXML
     private TextField mobile;
 
     @FXML
     private TextField pincode;
+
+    @FXML
+    private TextField shopInfo;
+
+    @FXML
+    private Label shopInfoLabel;
+
+    @FXML
+    private AnchorPane signUpPane;
 
     @FXML
     private Button su_logInButton;
@@ -59,46 +88,12 @@ public class SignUpController {
 
     @FXML
     private TextField userName;
-    @FXML
-    private AnchorPane sideForm;
 
     @FXML
-    private AnchorPane signUpPane;
-    @FXML
-    private AnchorPane logInPane;
-
-    private Stage stage;
-    private Scene scene;
-    @FXML
-    private void switchForm(ActionEvent event) {
-        TranslateTransition slider = new TranslateTransition();
-
-        if (event.getSource() == li_signUpButton) {
-            slider.setNode(sideForm);
-            slider.setToX(-600);
-            slider.setDuration(Duration.seconds(.7));
-            slider.setAutoReverse(true);
-
-//            slider.setOnFinished((ActionEvent e) ->{
-//                logInPane.setVisible(false);
-//            });
-            slider.play();
-
-        } else if (event.getSource() == su_logInButton){
-            slider.setNode(sideForm);
-            slider.setToX(0);
-            slider.setDuration(Duration.seconds(.7));
-            slider.play();
-        }
-    }
-
-    Connection con = null;
-    ResultSet rs = null;
-    PreparedStatement pst = null;
-    private Alert alert;
+    private ComboBox<String> typeBox;
 
     @FXML
-    public void logIn(ActionEvent event){
+    void logIn(ActionEvent event) {
         if(li_userEmail.getText().isEmpty() || li_password.getText().isEmpty()){
             alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error Message");
@@ -107,14 +102,16 @@ public class SignUpController {
             alert.showAndWait();
         } else {
             con = SQLConnection.connectDb();
-            String select = "SELECT email, password FROM USERS WHERE email = ? AND password = ?";
+            String select = "SELECT email, password FROM ACCOUNTS WHERE email = ? AND password = ?";
+
             try{
                 pst = con.prepareStatement(select);
                 pst.setString(1, li_userEmail.getText());
                 pst.setString(2, li_password.getText());
                 rs = pst.executeQuery();
                 if(rs.next()){
-                    userEmail = li_userEmail.getText();
+                    User.getInstance().setEmail(li_userEmail.getText());
+                    User.getInstance().setType(getAccountType(li_userEmail.getText()));
                     alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Information Message");
                     alert.setHeaderText(null);
@@ -133,7 +130,6 @@ public class SignUpController {
             }
         }
     }
-
     public void switchToHomePage(ActionEvent event){
         try {
             Parent root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
@@ -146,10 +142,10 @@ public class SignUpController {
             e.printStackTrace();
         }
     }
+
     @FXML
-    public void signUp(ActionEvent event) throws Exception {
-        if(userName.getText().isEmpty() || su_userEmail.getText().isEmpty() || mobile.getText().isEmpty() ||
-            address.getText().isEmpty() || pincode.getText().isEmpty() || su_password.getText().isEmpty()){
+    void signUp(ActionEvent event) {
+        if (userName.getText().isEmpty() || su_userEmail.getText().isEmpty() || mobile.getText().isEmpty() || pincode.getText().isEmpty() || su_password.getText().isEmpty()) {
             alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error Message");
             alert.setHeaderText(null);
@@ -157,27 +153,98 @@ public class SignUpController {
             alert.showAndWait();
         } else {
             con = SQLConnection.connectDb();
-            String insert = "INSERT INTO USERS(name, email, mobile, address, pincode, password) VALUES(?,?,?,?,?,?)";
+            String insertAccounts = "INSERT INTO ACCOUNTS(name, email, mobile, pincode, password) VALUES(?,?,?,?,?)";
             try {
-                pst = con.prepareStatement(insert);
+                pst = con.prepareStatement(insertAccounts);
                 pst.setString(1, userName.getText());
                 pst.setString(2, su_userEmail.getText());
                 pst.setInt(3, Integer.parseInt(mobile.getText()));
-                pst.setString(4, address.getText());
-                pst.setInt(5, Integer.parseInt(pincode.getText()));
-                pst.setString(6, su_password.getText());
+                pst.setInt(4, Integer.parseInt(pincode.getText()));
+                pst.setString(5, su_password.getText());
                 pst.execute();
-
-                JOptionPane.showMessageDialog(null, "Information saved");
+                if (getSelectedType().equals("Purchaser")) {
+                    String insertPurchasers = "INSERT INTO PURCHASERS(purchaserEmail, address) VALUES (?, ?)";
+                    try {
+                        pst = con.prepareStatement(insertPurchasers);
+                        pst.setString(2, su_userEmail.getText());
+                        pst.setString(2, address.getText());
+                        pst.execute();
+                        JOptionPane.showMessageDialog(null, "Information saved");
+                    } catch (Exception e) {
+                        JOptionPane.showMessageDialog(null, e);
+                    }
+                } else {
+                    String insertSellers = "INSERT INTO SELLERS(sellerEmail, sellerInfo, sellerBankAccount) VALUES(?,?,?)";
+                    try {
+                        pst = con.prepareStatement(insertSellers);
+                        pst.setString(1, su_userEmail.getText());
+                        pst.setString(2, shopInfo.getText());
+                        pst.setString(3, bankAcc.getText());
+                        pst.execute();
+                        JOptionPane.showMessageDialog(null, "Information saved");
+                    } catch (Exception e) {
+                        JOptionPane.showMessageDialog(null, e);
+                    }
+                }
             } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, e);
+                e.printStackTrace();
             }
         }
     }
 
-    public String getUserEmail() {
-        return userEmail;
+    private String getAccountType(String email) throws SQLException {
+        con = SQLConnection.connectDb();
+        String sql = "SELECT * FROM PURCHASERS WHERE purchaserEmail = ?";
+        pst = con.prepareStatement(sql);
+        pst.setString(1, email);
+        rs = pst.executeQuery();
+        if(rs.next()){
+            return "Purchaser";
+        }
+        else {
+            return "Seller";
+        }
     }
+    @FXML
+    void switchForm(ActionEvent event) {
+        if (event.getSource() == li_signUpButton) {
+            logInPane.setVisible(false);
+            signUpPane.setVisible(true);
+
+        } else if (event.getSource() == su_logInButton){
+            signUpPane.setVisible(false);
+            logInPane.setVisible(true);
+        }
+    }
+
+    public String getSelectedType(){
+        return typeBox.getSelectionModel().getSelectedItem();
+    }
+    @FXML
+    public void selectType(){
+        String s = getSelectedType();
+        User.getInstance().setType(s);
+        if(s.equals("Purchaser")){
+            shopInfoLabel.setVisible(false);
+            shopInfo.setVisible(false);
+            labelBankAcc.setVisible(false);
+            bankAcc.setVisible(false);
+            addressLabel.setVisible(true);
+            address.setVisible(true);
+        } else if(s.equals("Seller")){
+            addressLabel.setVisible(false);
+            address.setVisible(false);
+            shopInfoLabel.setVisible(true);
+            shopInfo.setVisible(true);
+            labelBankAcc.setVisible(true);
+            bankAcc.setVisible(true);
+        }
+
+    }
+    @FXML
+    public void initialize(){
+        ObservableList<String> list = FXCollections.observableArrayList("Purchaser", "Seller");
+        typeBox.setItems(list);
+    }
+
 }
-
-

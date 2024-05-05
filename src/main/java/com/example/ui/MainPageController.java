@@ -15,9 +15,6 @@ public class MainPageController extends MenuBarMethods{
     private Button cartButton;
 
     @FXML
-    private ImageView homeButton;
-
-    @FXML
     private Button logOutButton;
 
     @FXML
