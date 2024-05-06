@@ -1,4 +1,4 @@
 package com.example.ui.Controller;
 
-public class MainPageSellerController extends MenuBarMethods{
+public class MainPageSellerController extends MenuBarMethods {
 }

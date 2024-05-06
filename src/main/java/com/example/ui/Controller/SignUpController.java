@@ -17,7 +17,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class SignUpController extends MenuBarMethods{
+public class SignUpController extends MenuBarMethods {
     Connection con = null;
     ResultSet rs = null;
     PreparedStatement pst = null;

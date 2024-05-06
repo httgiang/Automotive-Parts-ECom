@@ -1,5 +1,6 @@
 package com.example.ui.Controller;
 
+import com.example.ui.Entity.Cart;
 import com.example.ui.Entity.Products;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,13 +25,13 @@ public class CartController extends MenuBarMethods implements Initializable {
     @FXML
     private TableColumn<Products, Float> amountCol;
     @FXML
-    private TableColumn<Products, String> pIDCol;
+    private TableColumn<Cart, String> pIDCol;
 
     @FXML
     private TableColumn<Products, String> pNameCol;
 
     @FXML
-    private TableColumn<Products, Integer> quantityCol;
+    private TableColumn<Cart, Integer> quantityCol;
 
     @FXML
     private TableColumn<Products, Button> removeCol;
@@ -43,12 +44,11 @@ public class CartController extends MenuBarMethods implements Initializable {
 
 
     private void loadData(){
-        pIDCol.setCellValueFactory(new PropertyValueFactory<>("pId"));
+        pIDCol.setCellValueFactory(new PropertyValueFactory<>("productId"));
         pNameCol.setCellValueFactory(new PropertyValueFactory<>("pName"));
+        quantityCol.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         pIDCol.setCellValueFactory(new PropertyValueFactory<>("pId"));
         pIDCol.setCellValueFactory(new PropertyValueFactory<>("pId"));
-        pIDCol.setCellValueFactory(new PropertyValueFactory<>("pId"));
-
     }
 
     @Override

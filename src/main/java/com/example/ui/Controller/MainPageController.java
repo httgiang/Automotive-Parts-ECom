@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class MainPageController extends MenuBarMethods{
+public class MainPageController extends MenuBarMethods {
 
     private Stage stage;
     private Scene scene;

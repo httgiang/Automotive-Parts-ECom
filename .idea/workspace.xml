@@ -7,32 +7,17 @@
     <list default="true" id="20258a6c-0b47-43f7-abf6-04a25cecf102" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MainPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/MainPageSellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MainPageSellerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/MenuBarMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MenuBarMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/ProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProfilePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/StockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/Cart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/Cart.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/MainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/MainPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/MainPageSeller.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/MainPageSeller.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/Order.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/Order.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/PaymentPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/PaymentPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/Product.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/Product.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MainPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MainPageSellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MainPageSellerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MenuBarMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MenuBarMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProfilePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/LogOut.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/LogOut.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/OrderSeller.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/OrderSeller.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/ProfilePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/ProfilePage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/ProfilePageSeller.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/ProfilePageSeller.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/Shipped.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/Shipped.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/SignUpLogIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/SignUpLogIn.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/Stock.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/Stock.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/ViewProductPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/ViewProductPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/addProductPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/addProductPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/css/HomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/css/HomePage.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +31,8 @@
         <option value="Kotlin Interface" />
         <option value="Interface" />
         <option value="JavaFXApplication" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -73,27 +58,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "ProfilePage",
-    "last_opened_file_path": "D:/AutomotiveParts",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.49885058",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ProfilePage&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/AutomotiveParts&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.49885058&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\UI\src\main\resources\com\example\ui" />
@@ -106,11 +91,11 @@
   </component>
   <component name="RunManager">
     <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.ui.Controller.MainApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.example.ui.MainApplication" />
       <module name="UI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.ui.*" />
+          <option name="PATTERN" value="com.example.ui.Controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,7 +133,8 @@
       <workItem from="1714670662454" duration="7275000" />
       <workItem from="1714715411709" duration="25156000" />
       <workItem from="1714805475253" duration="33077000" />
-      <workItem from="1714953601567" duration="14828000" />
+      <workItem from="1714953601567" duration="15145000" />
+      <workItem from="1714984305077" duration="3271000" />
     </task>
     <servers />
   </component>
@@ -160,7 +146,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProfilePageController.java</url>
-          <line>94</line>
+          <line>93</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

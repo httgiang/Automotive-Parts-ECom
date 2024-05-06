@@ -3,7 +3,7 @@ package com.example.ui.Controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 
-public class OrderController extends MenuBarMethods{
+public class OrderController extends MenuBarMethods {
 
     @FXML
     private TableColumn<?, ?> colOID;

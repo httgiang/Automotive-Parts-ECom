@@ -10,15 +10,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 
-
-
 public class MenuBarMethods {
     private static Stage stage;
     private static Scene scene;
 
     public void switchToScene(ActionEvent event, String fileName) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource(fileName));
+            Parent root = FXMLLoader.load(getClass().getResource("/com/example/ui/" + fileName));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -40,7 +38,11 @@ public class MenuBarMethods {
 
     @FXML
     public void switchToProfile(ActionEvent event) {
-        switchToScene(event, "ProfilePage.fxml");
+        if (User.getInstance().getType().equals("Purchaser")) {
+            switchToScene(event, "ProfilePage.fxml");
+        } else {
+            switchToScene(event, "ProfilePageSeller.fxml");
+        }
     }
 
     @FXML
@@ -50,7 +52,11 @@ public class MenuBarMethods {
 
     @FXML
     public void switchToOrder(ActionEvent event) {
-        switchToScene(event, "Order.fxml");
+        if (User.getInstance().getType().equals("Purchaser")) {
+            switchToScene(event, "Order.fxml");
+        } else {
+            switchToScene(event, "OrderSeller.fxml");
+        }
     }
 
     @FXML

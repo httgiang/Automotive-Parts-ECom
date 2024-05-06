@@ -50,20 +50,20 @@ public class ProfilePageController extends MenuBarMethods {
 
     @FXML
     private void updateInformation(){
-        try {
-            Connection con = SQLConnection.connectDb();
-            assert con != null;
-            String sql = "UPDATE ACCOUNTS SET name = ?, mobile = ?, address = ?, pincode = ?";
-            PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, txt_name.getText());
-            pst.setInt(2, (Integer.parseInt(txt_mobile.getText())));
-            pst.setString(3, txt_address.getText());
-            pst.setInt(4, (Integer.parseInt(txt_pincode.getText())));
-            pst.execute();
-            JOptionPane.showMessageDialog(null, "Update successfully!");
-        } catch (Exception e){
-            JOptionPane.showMessageDialog(null, e);
-        }
+//        try {
+//            Connection con = SQLConnection.connectDb();
+//            assert con != null;
+//            String sql = "UPDATE ACCOUNTS SET name = ?, mobile = ?, address = ?, pincode = ?";
+//            PreparedStatement pst = con.prepareStatement(sql);
+//            pst.setString(1, txt_name.getText());
+//            pst.setInt(2, (Integer.parseInt(txt_mobile.getText())));
+//            pst.setString(3, txt_address.getText());
+//            pst.setInt(4, (Integer.parseInt(txt_pincode.getText())));
+//            pst.execute();
+//            JOptionPane.showMessageDialog(null, "Update successfully!");
+//        } catch (Exception e){
+//            JOptionPane.showMessageDialog(null, e);
+//        }
     }
 
     private void showUserInformation(){
@@ -87,10 +87,9 @@ public class ProfilePageController extends MenuBarMethods {
                     pst.setString(1, userEmail);
                     rs = pst.executeQuery();
                     if (rs.next()) {
-                        labelAddress.setVisible(true);
-                        txt_address.setVisible(true);
                         txt_address.setText(rs.getString("address"));
                     }
+                    return;
                 } else {
                     String querySeller = "SELECT * FROM SELLERS WHERE sellerEmail = ?";
                     pst = con.prepareStatement(querySeller);
@@ -98,13 +97,10 @@ public class ProfilePageController extends MenuBarMethods {
                     rs = pst.executeQuery();
 
                     if (rs.next()) {
-                        labelInfo.setVisible(true);
-                        txt_info.setVisible(true);
-                        labelBank.setVisible(true);
-                        txt_bank.setVisible(true);
                         txt_info.setText(rs.getString("sellerInfo"));
                         txt_bank.setText(rs.getString("sellerBankAccount"));
                     }
+                    return;
                 }
             }
             JOptionPane.showMessageDialog(null, "Successfully show info!");

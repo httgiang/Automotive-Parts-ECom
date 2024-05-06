@@ -9,8 +9,8 @@
       <AnchorPane layoutX="338.0" layoutY="283.0" prefHeight="175.0" prefWidth="523.0" style="-fx-background-color: white;" styleClass="window" stylesheets="@css/HomePage.css">
          <children>
             <Label fx:id="prompt_label" layoutX="21.0" layoutY="14.0" text="Are you sure you want to log out ?" />
-            <Button fx:id="cancelButtonLog" layoutX="21.0" layoutY="108.0" mnemonicParsing="false" style="-fx-background-color: lightgreen; -fx-text-fill: green;" text="CANCEL" />
-            <Button fx:id="yesButton" layoutX="349.0" layoutY="108.0" mnemonicParsing="false" style="-fx-background-color: pink; -fx-text-fill: darkred;" text="YES" />
+            <Button fx:id="cancelButtonLog" layoutX="21.0" layoutY="108.0" mnemonicParsing="false" onAction="#switchToHome" style="-fx-background-color: lightgreen; -fx-text-fill: green;" text="CANCEL" />
+            <Button fx:id="yesButton" layoutX="349.0" layoutY="108.0" mnemonicParsing="false" onAction="#switchToLogin" style="-fx-background-color: pink; -fx-text-fill: darkred;" text="YES" />
          </children>
       </AnchorPane>
    </children>
