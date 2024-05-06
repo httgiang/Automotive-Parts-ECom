@@ -14,15 +14,6 @@ public class CartController extends MenuBarMethods{
     private Scene scene;
     @FXML
     public void onPayNowButtonClicked(ActionEvent event){
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("PaymentPage.fxml"));
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
+        switchToScene(event, "PaymentPage.fxml");
     }
 }
