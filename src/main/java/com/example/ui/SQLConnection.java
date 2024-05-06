@@ -7,9 +7,9 @@ import javax.swing.*;
 public class SQLConnection {
     static Connection con = null;
     public static Connection connectDb(){
-        String url = "jdbc:sqlserver://DESKTOP-F6P99QD;databaseName=AutomativePartsWeb;encrypt=true;trustServerCertificate=true";
+        String url = "jdbc:sqlserver://DESKTOP-00EA3O0;databaseName=AutomativePartsWeb;encrypt=true;trustServerCertificate=true";
         String user = "sa";
-        String password = "Giangdb2311";
+        String password = "Trinh55";
 
         try{
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

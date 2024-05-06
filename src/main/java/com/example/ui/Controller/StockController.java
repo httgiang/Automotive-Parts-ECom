@@ -23,7 +23,7 @@ public class StockController extends MenuBarMethods {
 
     @FXML
     public void switchToAddNewProduct(javafx.event.ActionEvent event) {
-        switchToScene(event, "addProductPage.fxml");
+        switchToScene(event, "AddProductPage.fxml");
     }
 }
 
