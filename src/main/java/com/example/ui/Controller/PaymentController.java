@@ -1,4 +1,4 @@
-package com.example.ui;
+package com.example.ui.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,8 +7,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.awt.*;
 
 public class PaymentController extends MenuBarMethods{
     @FXML

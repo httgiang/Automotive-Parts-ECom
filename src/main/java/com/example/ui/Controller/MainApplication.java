@@ -1,4 +1,4 @@
-package com.example.ui;
+package com.example.ui.Controller;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

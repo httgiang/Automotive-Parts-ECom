@@ -1,31 +1,17 @@
-package com.example.ui;
+package com.example.ui.Controller;
 
 import com.example.ui.Entity.User;
-import javafx.animation.TranslateTransition;
-import javafx.event.ActionEvent;
+import com.example.ui.SQLConnection;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
-import javafx.util.Duration;
 
 import javax.swing.*;
-import javax.swing.text.html.ImageView;
-import java.awt.*;
-import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ResourceBundle;
 
 public class ProfilePageController extends MenuBarMethods {
 

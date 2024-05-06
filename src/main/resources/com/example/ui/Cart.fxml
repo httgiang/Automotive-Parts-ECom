@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.CartController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.CartController">
     <children>
         <AnchorPane id="menuBar" prefHeight="50.0" prefWidth="1200.0" stylesheets="@css/HomePage.css">
             <children>
@@ -24,7 +24,7 @@
                     </graphic>
                 </Button>
                 <Label layoutX="40.0" layoutY="14.0" styleClass="menuLabel" text="Automotive Parts Website" />
-                <Button fx:id="logOutButton" layoutX="1094.0" layoutY="7.0" mnemonicParsing="false" styleClass="menuButton" text="Logout">
+                <Button fx:id="logOutButton" layoutX="1094.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToLogout" styleClass="menuButton" text="Logout">
                     <graphic>
                         <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -72,15 +72,15 @@
         </AnchorPane>
         <AnchorPane id="mainPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/HomePage.css">
             <children>
-                <TableView layoutX="43.0" layoutY="65.0" prefHeight="427.0" prefWidth="1115.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
+                <TableView layoutX="14.0" layoutY="68.0" prefHeight="427.0" prefWidth="1145.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
                     <columns>
-                        <TableColumn prefWidth="113.60000228881836" text="Picture" />
-                        <TableColumn prefWidth="366.3999786376953" text="Product" />
-                        <TableColumn prefWidth="134.39999389648438" text="Price" />
-                        <TableColumn prefWidth="116.0" text="Quantity" />
-                        <TableColumn prefWidth="130.0" text="Add" />
-                        <TableColumn prefWidth="130.0" text="Remove" />
-                        <TableColumn prefWidth="145.60003662109375" text="Amount" />
+                        <TableColumn fx:id="pIDCol" prefWidth="120.0" text="ProductID" />
+                        <TableColumn fx:id="pNameCol" prefWidth="370.0" text="Product" />
+                        <TableColumn fx:id="quantityCol" prefWidth="120.0" text="Quantity" />
+                        <TableColumn fx:id="addCol" prefWidth="130.0" text="Add" />
+                        <TableColumn fx:id="removeCol" prefWidth="130.0" text="Remove" />
+                        <TableColumn fx:id="amountCol" prefWidth="145.0" text="Amount" />
+                        <TableColumn fx:id="selectCol" prefWidth="128.0000244140624" text="Select" />
                     </columns>
                 </TableView>
                 <Label layoutX="521.0" layoutY="14.0" styleClass="largeLabel" stylesheets="@css/table_view.css" text="Cart Items" />
