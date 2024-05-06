@@ -19,7 +19,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class SignUpController{
+public class SignUpController extends MenuBarMethods{
     Connection con = null;
     ResultSet rs = null;
     PreparedStatement pst = null;
@@ -117,7 +117,7 @@ public class SignUpController{
                     alert.setHeaderText(null);
                     alert.setContentText("Successfully login!");
                     alert.showAndWait();
-                    switchToHomePage(event);
+                    switchToHome(event);
                 } else {
                     alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Error Message");
@@ -128,18 +128,6 @@ public class SignUpController{
             } catch (Exception e){
                 e.printStackTrace();
             }
-        }
-    }
-    public void switchToHomePage(ActionEvent event){
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        catch(Exception e){
-            e.printStackTrace();
         }
     }
 
@@ -166,7 +154,7 @@ public class SignUpController{
                     String insertPurchasers = "INSERT INTO PURCHASERS(purchaserEmail, address) VALUES (?, ?)";
                     try {
                         pst = con.prepareStatement(insertPurchasers);
-                        pst.setString(2, su_userEmail.getText());
+                        pst.setString(1, su_userEmail.getText());
                         pst.setString(2, address.getText());
                         pst.execute();
                         JOptionPane.showMessageDialog(null, "Information saved");

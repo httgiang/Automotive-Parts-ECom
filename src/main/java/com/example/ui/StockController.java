@@ -1,11 +1,9 @@
 package com.example.ui;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.awt.*;
@@ -26,17 +24,8 @@ public class StockController extends MenuBarMethods {
 
 
     @FXML
-    void switchToAddNewProduct(ActionEvent event) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("addProductPage.fxml"));
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
+    public void switchToAddNewProduct(javafx.event.ActionEvent event) {
+        switchToScene(event, "addProductPage.fxml");
     }
 }
 
