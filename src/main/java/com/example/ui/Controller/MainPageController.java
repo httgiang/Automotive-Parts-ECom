@@ -1,13 +1,12 @@
-package com.example.ui;
+package com.example.ui.Controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class MainPageController extends MenuBarMethods{
+public class MainPageController extends MenuBarMethods {
 
     private Stage stage;
     private Scene scene;

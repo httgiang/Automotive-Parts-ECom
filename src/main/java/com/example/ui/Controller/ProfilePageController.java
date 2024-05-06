@@ -1,31 +1,17 @@
-package com.example.ui;
+package com.example.ui.Controller;
 
 import com.example.ui.Entity.User;
-import javafx.animation.TranslateTransition;
-import javafx.event.ActionEvent;
+import com.example.ui.SQLConnection;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
-import javafx.util.Duration;
 
 import javax.swing.*;
-import javax.swing.text.html.ImageView;
-import java.awt.*;
-import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ResourceBundle;
 
 public class ProfilePageController extends MenuBarMethods {
 
@@ -64,20 +50,20 @@ public class ProfilePageController extends MenuBarMethods {
 
     @FXML
     private void updateInformation(){
-        try {
-            Connection con = SQLConnection.connectDb();
-            assert con != null;
-            String sql = "UPDATE ACCOUNTS SET name = ?, mobile = ?, address = ?, pincode = ?";
-            PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, txt_name.getText());
-            pst.setInt(2, (Integer.parseInt(txt_mobile.getText())));
-            pst.setString(3, txt_address.getText());
-            pst.setInt(4, (Integer.parseInt(txt_pincode.getText())));
-            pst.execute();
-            JOptionPane.showMessageDialog(null, "Update successfully!");
-        } catch (Exception e){
-            JOptionPane.showMessageDialog(null, e);
-        }
+//        try {
+//            Connection con = SQLConnection.connectDb();
+//            assert con != null;
+//            String sql = "UPDATE ACCOUNTS SET name = ?, mobile = ?, address = ?, pincode = ?";
+//            PreparedStatement pst = con.prepareStatement(sql);
+//            pst.setString(1, txt_name.getText());
+//            pst.setInt(2, (Integer.parseInt(txt_mobile.getText())));
+//            pst.setString(3, txt_address.getText());
+//            pst.setInt(4, (Integer.parseInt(txt_pincode.getText())));
+//            pst.execute();
+//            JOptionPane.showMessageDialog(null, "Update successfully!");
+//        } catch (Exception e){
+//            JOptionPane.showMessageDialog(null, e);
+//        }
     }
 
     private void showUserInformation(){
@@ -101,10 +87,9 @@ public class ProfilePageController extends MenuBarMethods {
                     pst.setString(1, userEmail);
                     rs = pst.executeQuery();
                     if (rs.next()) {
-                        labelAddress.setVisible(true);
-                        txt_address.setVisible(true);
                         txt_address.setText(rs.getString("address"));
                     }
+                    return;
                 } else {
                     String querySeller = "SELECT * FROM SELLERS WHERE sellerEmail = ?";
                     pst = con.prepareStatement(querySeller);
@@ -112,13 +97,10 @@ public class ProfilePageController extends MenuBarMethods {
                     rs = pst.executeQuery();
 
                     if (rs.next()) {
-                        labelInfo.setVisible(true);
-                        txt_info.setVisible(true);
-                        labelBank.setVisible(true);
-                        txt_bank.setVisible(true);
                         txt_info.setText(rs.getString("sellerInfo"));
                         txt_bank.setText(rs.getString("sellerBankAccount"));
                     }
+                    return;
                 }
             }
             JOptionPane.showMessageDialog(null, "Successfully show info!");

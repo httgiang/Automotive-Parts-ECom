@@ -10,4 +10,6 @@ module com.example.ui {
 
     opens com.example.ui to javafx.fxml;
     exports com.example.ui;
+    exports com.example.ui.Controller;
+    opens com.example.ui.Controller to javafx.fxml;
 }

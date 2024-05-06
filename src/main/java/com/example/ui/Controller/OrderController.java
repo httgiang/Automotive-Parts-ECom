@@ -1,17 +1,9 @@
-package com.example.ui;
+package com.example.ui.Controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
-import javafx.stage.Stage;
 
-import java.awt.*;
-
-public class OrderController extends MenuBarMethods{
+public class OrderController extends MenuBarMethods {
 
     @FXML
     private TableColumn<?, ?> colOID;

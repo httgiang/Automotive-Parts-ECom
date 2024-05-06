@@ -1,4 +1,4 @@
-package com.example.ui;
+package com.example.ui.Controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
@@ -6,8 +6,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

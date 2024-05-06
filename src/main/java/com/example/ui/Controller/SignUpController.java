@@ -1,14 +1,12 @@
-package com.example.ui;
+package com.example.ui.Controller;
 
 
 import com.example.ui.Entity.User;
+import com.example.ui.SQLConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
@@ -19,7 +17,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class SignUpController extends MenuBarMethods{
+public class SignUpController extends MenuBarMethods {
     Connection con = null;
     ResultSet rs = null;
     PreparedStatement pst = null;
