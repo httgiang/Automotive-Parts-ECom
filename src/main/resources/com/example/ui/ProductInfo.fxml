@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.ProductInfoController">
    <children>
-      <TextField layoutX="69.0" layoutY="62.0" text="Test" />
+      <TextField fx:id="txt_money" layoutX="46.0" layoutY="111.0" prefHeight="26.0" prefWidth="200.0" />
+      <Button fx:id="button" alignment="CENTER" contentDisplay="CENTER" layoutX="99.0" layoutY="154.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="94.0" style="-fx-font-size: 15px; -fx-font-weight: 700; -fx-background-radius: 5px;" textAlignment="JUSTIFY" />
+      <TextArea fx:id="txt_pName" layoutX="46.0" layoutY="33.0" prefHeight="66.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
