@@ -8,12 +8,6 @@ import javafx.scene.control.Button;
 public class LogOutController extends MenuBarMethods {
 
     @FXML
-    private Button cancelButton;
-
-    @FXML
-    private Button yesButton;
-
-    @FXML
     void switchToLogin(ActionEvent event) {
         User.getInstance().setEmail(null);
         switchToScene(event, "SignUpLogIn.fxml");

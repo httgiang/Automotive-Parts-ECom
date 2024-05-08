@@ -1,9 +1,14 @@
+.largeLabel{
+    -fx-text-fill: #314D6E;
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-font-size: 30px;
+}
 .table-view{
     -fx-background-color:#FFFFFF ;
 }
-#Action, #NameColumn, #DateColumn,#PatientContactNumber, #DescriptionColumn, #AdditionalNoteColumn, #MoneyPayColumn, #laboratoryIdColumn, #contactNumberColumn, #AddressPatient, #QuantityColumn, #DateLaboColumn, #PatientName{
-    -fx-font-size: 20px;
-}
+
 .table-view .column-header{
     -fx-background-color: #A9D8C7;
     -fx-text-fill: black;
@@ -19,17 +24,30 @@
 .table-view .column-header-background.label{
     -fx-text-fill: white;
 }
-.table-row-cell{
+.table-row-cell-even{
     -fx-background-color: white;
 }
 .table-row-cell-odd{
-    -fx-background-color:#F7F6FE;
+    -fx-background-color: lightblue;
+}
+.table-view .table-cell{
+    -fx-text-fill: black;
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
 }
 
-.largeLabel{
-    -fx-text-fill: #314D6E;
-    -fx-font-family: 'Poppins';
-    -fx-font-style: normal;
-    -fx-font-weight: 700;
-    -fx-font-size: 30px;
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
 }
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+
+
