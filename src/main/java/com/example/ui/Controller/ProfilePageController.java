@@ -50,20 +50,21 @@ public class ProfilePageController extends MenuBarMethods {
 
     @FXML
     private void updateInformation(){
-//        try {
-//            Connection con = SQLConnection.connectDb();
-//            assert con != null;
-//            String sql = "UPDATE ACCOUNTS SET name = ?, mobile = ?, address = ?, pincode = ?";
-//            PreparedStatement pst = con.prepareStatement(sql);
-//            pst.setString(1, txt_name.getText());
-//            pst.setInt(2, (Integer.parseInt(txt_mobile.getText())));
-//            pst.setString(3, txt_address.getText());
-//            pst.setInt(4, (Integer.parseInt(txt_pincode.getText())));
-//            pst.execute();
-//            JOptionPane.showMessageDialog(null, "Update successfully!");
-//        } catch (Exception e){
-//            JOptionPane.showMessageDialog(null, e);
-//        }
+        try {
+            Connection con = SQLConnection.connectDb();
+            assert con != null;
+            String sql = "UPDATE ACCOUNTS SET name = ?, mobile = ?, address = ?, pincode = ?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, txt_name.getText());
+            pst.setInt(2, (Integer.parseInt(txt_mobile.getText())));
+            pst.setString(3, txt_address.getText());
+            pst.setInt(4, (Integer.parseInt(txt_pincode.getText())));
+            pst.execute();
+
+            JOptionPane.showMessageDialog(null, "Update successfully!");
+        } catch (Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
     }
 
     private void showUserInformation(){
@@ -81,6 +82,7 @@ public class ProfilePageController extends MenuBarMethods {
                 txt_email.setText(userEmail);
                 txt_mobile.setText(String.valueOf((rs.getInt("mobile"))));
                 txt_pincode.setText(String.valueOf((rs.getInt("pincode"))));
+
                 if (userType.equals("Purchaser")) {
                     String queryPurchaser = "SELECT * FROM PURCHASERS WHERE purchaserEmail = ?";
                     pst = con.prepareStatement(queryPurchaser);

@@ -84,7 +84,7 @@
             <TextField fx:id="txt_email" layoutX="650.0" layoutY="115.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
             <TextField fx:id="txt_mobile" layoutX="650.0" layoutY="175.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
             <TextField fx:id="txt_pincode" layoutX="647.0" layoutY="235.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-            <Button fx:id="updateButton" layoutX="126.0" layoutY="434.0" minWidth="184.0" mnemonicParsing="false" onAction="#updateInformation" prefHeight="30.0" prefWidth="184.0" stylesheets="@css/profile.css" text="UPDATE " />
+            <Button fx:id="updateButton" layoutX="733.0" layoutY="453.0" minWidth="184.0" mnemonicParsing="false" onAction="#updateInformation" prefHeight="30.0" prefWidth="184.0" stylesheets="@css/profile.css" text="UPDATE INFO" />
             <TextArea fx:id="txt_address" layoutX="647.0" layoutY="303.0" prefHeight="114.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
          </children></AnchorPane>
     </children>

@@ -11,8 +11,8 @@ import javafx.stage.Stage;
 
 
 public class MenuBarMethods {
-    private static Stage stage;
-    private static Scene scene;
+    private Stage stage;
+    private Scene scene;
 
     public void switchToScene(ActionEvent event, String fileName) {
         try {

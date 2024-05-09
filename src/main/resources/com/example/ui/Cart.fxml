@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -72,16 +73,20 @@
         </AnchorPane>
         <AnchorPane id="mainPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/HomePage.css">
             <children>
-                <TableView layoutX="14.0" layoutY="68.0" prefHeight="427.0" prefWidth="1145.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
+                <TableView fx:id="TableCart" layoutX="100.0" layoutY="60.0" prefHeight="427.0" prefWidth="940.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
                     <columns>
                         <TableColumn fx:id="pIDCol" prefWidth="120.0" text="ProductID" />
                         <TableColumn fx:id="pNameCol" prefWidth="370.0" text="Product" />
                         <TableColumn fx:id="quantityCol" prefWidth="120.0" text="Quantity" />
-                        <TableColumn fx:id="addCol" prefWidth="130.0" text="Add" />
-                        <TableColumn fx:id="removeCol" prefWidth="130.0" text="Remove" />
-                        <TableColumn fx:id="amountCol" prefWidth="145.0" text="Amount" />
-                        <TableColumn fx:id="selectCol" prefWidth="128.0000244140624" text="Select" />
+                        <TableColumn fx:id="amountCol" prefWidth="130.0" text="Amount" />
+                        <TableColumn fx:id="removeCol" prefWidth="100.0" text="Remove" />
+                        <TableColumn fx:id="selectCol" prefWidth="100.0" text="Select" />
                     </columns>
+               <styleClass>
+                  <String fx:value="table-row-cell" />
+                  <String fx:value="table-row-cell-odd" />
+                  <String fx:value="table-view" />
+               </styleClass>
                 </TableView>
                 <Label layoutX="521.0" layoutY="14.0" styleClass="largeLabel" stylesheets="@css/table_view.css" text="Cart Items" />
             <Button fx:id="cancelButton" layoutX="785.0" layoutY="525.0" mnemonicParsing="false" style="-fx-background-color: lightgrey; -fx-font-weight: 700; -fx-text-fill: black;" text="Cancel">

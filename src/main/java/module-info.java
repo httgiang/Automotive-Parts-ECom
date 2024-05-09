@@ -1,7 +1,6 @@
 module com.example.ui {
     requires javafx.controls;
     requires javafx.fxml;
-
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
     requires java.sql;
@@ -11,5 +10,6 @@ module com.example.ui {
     opens com.example.ui to javafx.fxml;
     exports com.example.ui;
     exports com.example.ui.Controller;
-    opens com.example.ui.Controller to javafx.fxml;
+    opens com.example.ui.Controller to javafx.fxml, javafx.base;
+    opens com.example.ui.Entity to javafx.fxml, javafx.base;
 }
