@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
@@ -8,7 +13,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.ProfilePageController">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.ProfilePageController">
     <children>
         <AnchorPane id="menuBar" prefHeight="50.0" prefWidth="1200.0" stylesheets="@css/HomePage.css">
             <children>
@@ -49,20 +54,11 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button fx:id="stockButton" layoutX="670.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToStock" styleClass="menuButton" text="Stock">
+                <Button fx:id="cartButton" layoutX="794.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToCart" styleClass="menuButton" text="Cart">
                     <graphic>
                         <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../../pictures/Product.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button fx:id="shippedButton" layoutX="774.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToShipped" styleClass="menuButton" text="Shipped">
-                    <graphic>
-                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../../../pictures/Delivery.png" />
+                                <Image url="@../../../pictures/Shopping Cart.png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -79,24 +75,32 @@
         </AnchorPane>
         <AnchorPane id="mainPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/HomePage.css">
             <children>
-                <ImageView fitHeight="288.0" fitWidth="293.0" layoutX="103.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../../../pictures/defaultAvatar.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="460.0" layoutY="60.0" stylesheets="@css/profile.css" text="Full name:" />
-                <Label layoutX="460.0" layoutY="120.0" stylesheets="@css/profile.css" text="Email:" />
-                <Label layoutX="462.0" layoutY="183.0" stylesheets="@css/profile.css" text="Contact number:" />
-                <Label layoutX="460.0" layoutY="240.0" stylesheets="@css/profile.css" text="Pincode:" />
-                <TextField fx:id="txt_name" layoutX="648.0" layoutY="55.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <TextField fx:id="txt_email" layoutX="650.0" layoutY="115.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <TextField fx:id="txt_mobile" layoutX="650.0" layoutY="175.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <TextField fx:id="txt_pincode" layoutX="647.0" layoutY="235.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <Button fx:id="updateButton" layoutX="126.0" layoutY="434.0" minWidth="184.0" mnemonicParsing="false" onAction="#updateInformation" prefHeight="30.0" prefWidth="184.0" stylesheets="@css/profile.css" text="UPDATE " />
-                <Label fx:id="labelBank" layoutX="462.0" layoutY="454.0" stylesheets="@css/profile.css" text="Bank account:" />
-                <Label fx:id="labelInfo" layoutX="462.0" layoutY="344.0" stylesheets="@css/profile.css" text="Shop information:" />
-                <TextField fx:id="txt_bank" layoutX="647.0" layoutY="449.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <TextArea fx:id="txt_info" layoutX="647.0" layoutY="303.0" prefHeight="114.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <Label layoutX="533.0" layoutY="69.0" stylesheets="@css/profile.css" text="Product ID:" />
+                <Label layoutX="533.0" layoutY="129.0" stylesheets="@css/profile.css" text="Name:" />
+                <Label layoutX="533.0" layoutY="192.0" stylesheets="@css/profile.css" text="Type" />
+                <Label fx:id="labelAddress" layoutX="533.0" layoutY="372.0" stylesheets="@css/profile.css" text="Description:" />
+                <Label layoutX="533.0" layoutY="249.0" stylesheets="@css/profile.css" text="Price:" />
+                <TextField fx:id="txt_name" layoutX="721.0" layoutY="64.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <TextField fx:id="txt_email" layoutX="723.0" layoutY="124.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <TextField fx:id="txt_mobile" layoutX="723.0" layoutY="184.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <TextField fx:id="txt_pincode" layoutX="723.0" layoutY="244.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <Button fx:id="updateButton" layoutX="143.0" layoutY="459.0" maxHeight="50.0" maxWidth="260.0" minWidth="184.0" mnemonicParsing="false" onAction="#updateInformation" prefHeight="50.0" prefWidth="260.0" stylesheets="@css/profile.css" text="UPDATE ">
+               <font>
+                  <Font size="23.0" />
+               </font></Button>
+                <TextArea fx:id="txt_address" layoutX="720.0" layoutY="372.0" prefHeight="80.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+            <ImageView fitHeight="346.0" fitWidth="346.0" layoutX="95.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../Downloads/images.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txt_pincode1" layoutX="721.0" layoutY="306.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+            <Label layoutX="533.0" layoutY="311.0" stylesheets="@css/profile.css" text="Stock Quantity:" />
+            <Button layoutX="897.0" layoutY="486.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="245.0" style="-fx-background-color: lightskyblue;" text="UPDATE PRODUCT" textFill="#1e377c">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Button>
             </children></AnchorPane>
     </children>
 </AnchorPane>
