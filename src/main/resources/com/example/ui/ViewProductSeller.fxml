@@ -84,19 +84,19 @@
                 <TextField fx:id="txt_pname" layoutX="723.0" layoutY="124.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
                 <TextField fx:id="txt_ptype" layoutX="723.0" layoutY="184.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
                 <TextField fx:id="txt_pprice" layoutX="723.0" layoutY="244.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <Button fx:id="updateButton" layoutX="143.0" layoutY="459.0" maxHeight="50.0" maxWidth="260.0" minWidth="184.0" mnemonicParsing="false" onAction="#updateInformation" prefHeight="50.0" prefWidth="260.0" stylesheets="@css/profile.css" text="UPDATE ">
+                <Button fx:id="updateButton" layoutX="143.0" layoutY="459.0" maxHeight="50.0" maxWidth="260.0" minWidth="184.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" stylesheets="@css/profile.css" text="UPDATE ">
                <font>
                   <Font size="23.0" />
                </font></Button>
                 <TextArea fx:id="txt_pdescription" layoutX="720.0" layoutY="372.0" prefHeight="80.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-            <ImageView fx:id="pImg" fitHeight="346.0" fitWidth="346.0" layoutX="95.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="pImg" fitHeight="346.0" fitWidth="346.0" layoutX="127.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../../../../../Downloads/images.png" />
                </image>
             </ImageView>
             <TextField fx:id="txt_pstockQuantity" layoutX="721.0" layoutY="306.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
             <Label layoutX="533.0" layoutY="311.0" stylesheets="@css/profile.css" text="Stock Quantity:" />
-            <Button layoutX="897.0" layoutY="486.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="245.0" style="-fx-background-color: lightskyblue;" text="UPDATE PRODUCT" textFill="#1e377c">
+            <Button fx:id="button_updateProduct" layoutX="897.0" layoutY="486.0" mnemonicParsing="false" onAction="#updateProductInformation" prefHeight="50.0" prefWidth="245.0" style="-fx-background-color: lightskyblue;" text="UPDATE PRODUCT" textFill="#1e377c">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>

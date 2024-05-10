@@ -38,6 +38,9 @@ public class ViewProductController extends MenuBarMethods {
     private TextField txt_selectQuantity;
 
     @FXML
+    private Button button_addToCart;
+
+    @FXML
     private ImageView productImg;
 
     private void showProductInformation() {
@@ -68,7 +71,7 @@ public class ViewProductController extends MenuBarMethods {
         }
     }
 
-    private void addToCart(ActionEvent event) {
+    private void addToCart() {
         if (txt_selectQuantity.getText().isEmpty()) {
             alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error Message");
@@ -76,18 +79,25 @@ public class ViewProductController extends MenuBarMethods {
             alert.setContentText("Please fill in the Product Quantity!");
             alert.showAndWait();
         } else {
-            String puchaserEmail = User.getInstance().getEmail();
+            String purchaserEmail = User.getInstance().getEmail();
             Connection con = SQLConnection.connectDb();
             String insertQuantity = "INSERT INTO CART(purchaserEmail, productID, productQuantity) VALUES(?,?,?)";
             try {
                 pst = con.prepareStatement(insertQuantity);
-                pst.setString(1, puchaserEmail);
+                pst.setString(1, purchaserEmail);
                 pst.setString(2, txt_productID.getText());
                 pst.setInt(3, Integer.parseInt(txt_selectQuantity.getText()));
                 pst.execute();
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    // if button is clicked -> call method to update info in DB
+    private void activateAddToCartButton(ActionEvent event) {
+        if(event.getSource() == button_addToCart) {
+            addToCart();
         }
     }
     public void initialize() {
