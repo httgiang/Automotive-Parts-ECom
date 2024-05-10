@@ -80,23 +80,25 @@
                 <Label layoutX="533.0" layoutY="192.0" stylesheets="@css/profile.css" text="Type" />
                 <Label fx:id="labelAddress" layoutX="533.0" layoutY="372.0" stylesheets="@css/profile.css" text="Description:" />
                 <Label layoutX="533.0" layoutY="249.0" stylesheets="@css/profile.css" text="Price:" />
-                <TextField fx:id="txt_name" layoutX="721.0" layoutY="64.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <TextField fx:id="txt_email" layoutX="723.0" layoutY="124.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <TextField fx:id="txt_mobile" layoutX="723.0" layoutY="184.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <TextField fx:id="txt_pincode" layoutX="723.0" layoutY="244.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <TextArea fx:id="txt_address" layoutX="720.0" layoutY="372.0" prefHeight="80.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <ImageView fitHeight="342.0" fitWidth="349.0" layoutX="90.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                <TextField fx:id="txt_productID" layoutX="721.0" layoutY="64.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <TextField fx:id="txt_pName" layoutX="723.0" layoutY="124.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <TextField fx:id="txt_pType" layoutX="723.0" layoutY="184.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <TextField fx:id="txt_pPrice" layoutX="723.0" layoutY="244.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <TextArea fx:id="txt_pInfo" layoutX="720.0" layoutY="372.0" prefHeight="80.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <ImageView fx:id="productImg" fitHeight="342.0" fitWidth="349.0" layoutX="90.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../../pictures/Product.png" />
                     </image>
                 </ImageView>
-                <TextField fx:id="txt_pincode1" layoutX="721.0" layoutY="306.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <TextField fx:id="txt_pStockQuantity" layoutX="721.0" layoutY="306.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
                 <Label layoutX="533.0" layoutY="311.0" stylesheets="@css/profile.css" text="Stock Quantity:" />
-                <Button layoutX="528.0" layoutY="486.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="614.0" style="-fx-background-color: lightskyblue;" text="ADD TO CART" textFill="#1e377c">
+                <Button layoutX="944.0" layoutY="476.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="201.0" style="-fx-background-color: lightskyblue;" text="ADD TO CART" textFill="#1e377c">
                     <font>
                         <Font name="System Bold" size="23.0" />
                     </font>
                 </Button>
+                <TextField fx:id="txt_selectQuantity" layoutX="720.0" layoutY="481.0" prefHeight="40.0" prefWidth="87.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <Label fx:id="labelAddress1" layoutX="533.0" layoutY="486.0" stylesheets="@css/profile.css" text="Select Quantity:" />
             </children></AnchorPane>
     </children>
 </AnchorPane>

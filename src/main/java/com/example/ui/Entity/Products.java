@@ -13,6 +13,18 @@ public class Products {
     int pStockQuant;
     Button addButton;
     Button removeButton;
+    private static Products instance;
+    public static Products getInstance() {
+        if (instance == null) {
+            instance = new Products();
+        }
+        return instance;
+    }
+
+    public String getProductID() {
+        return pId;
+    }
+
 
 
 }
