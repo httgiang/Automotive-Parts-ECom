@@ -4,14 +4,10 @@ import com.example.ui.SQLConnection;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.net.URL;
 import java.sql.*;
 import java.util.ArrayList;
@@ -20,27 +16,7 @@ import java.util.ResourceBundle;
 
 public class MainPageController extends MenuBarMethods implements Initializable {
 
-    private Stage stage;
-    private Scene scene;
     private Connection con;
-    @FXML
-    private Button cartButton;
-
-    @FXML
-    private Button logOutButton;
-
-    @FXML
-    private Button orderButton;
-
-    @FXML
-    private Button profileButton;
-
-    @FXML
-    private TextField searchBar;
-
-    @FXML
-    private Button searchButton;
-
     @FXML
     private ScrollPane scrollPane;
 
@@ -70,7 +46,7 @@ public class MainPageController extends MenuBarMethods implements Initializable 
                 productPaneList.add(pane);
 
                 ProductInfoController controller  = loader.getController();
-                controller.setProductId(productId);
+                controller.initProductInfo(productId);
             }
             for (AnchorPane pane : productPaneList) {
                 pane.setLayoutX(xIndex * width);

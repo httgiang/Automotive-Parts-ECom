@@ -70,7 +70,7 @@
         </AnchorPane>
         <AnchorPane id="mainPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/HomePage.css">
          <children>
-            <ImageView fitHeight="288.0" fitWidth="293.0" layoutX="103.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="profileImg" fitHeight="288.0" fitWidth="293.0" layoutX="103.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../pictures/defaultAvatar.png" />
                </image>
@@ -86,6 +86,7 @@
             <TextField fx:id="txt_pincode" layoutX="647.0" layoutY="235.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
             <Button fx:id="updateButton" layoutX="733.0" layoutY="453.0" minWidth="184.0" mnemonicParsing="false" onAction="#updateInformation" prefHeight="30.0" prefWidth="184.0" stylesheets="@css/profile.css" text="UPDATE INFO" />
             <TextArea fx:id="txt_address" layoutX="647.0" layoutY="303.0" prefHeight="114.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+            <Button fx:id="upImg" layoutX="210.0" layoutY="372.0" mnemonicParsing="false" onAction="#chooseImg" text="Upload image" />
          </children></AnchorPane>
     </children>
 </AnchorPane>

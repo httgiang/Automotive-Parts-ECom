@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.MainPageController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.AddProductController">
     <children>
         <AnchorPane id="menuBar" prefHeight="50.0" prefWidth="1200.0" stylesheets="@css/HomePage.css">
             <children>
@@ -103,15 +103,16 @@
                             </font>
                         </Button>
                         <Label layoutX="64.0" layoutY="373.0" styleClass="normalLabel" stylesheets="@css/addForm.css" text="Product Image" />
-                        <Button fx:id="p_addButton" layoutX="409.0" layoutY="467.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="164.0" styleClass="AddButton" stylesheets="@css/addForm.css" text="ADD PRODUCT" textFill="WHITE">
+                        <Button fx:id="p_addButton" layoutX="409.0" layoutY="467.0" mnemonicParsing="false" onAction="#insertData" prefHeight="39.0" prefWidth="164.0" styleClass="AddButton" stylesheets="@css/addForm.css" text="ADD PRODUCT" textFill="WHITE">
                             <font>
                                 <Font name="System Bold" size="18.0" />
                             </font>
                         </Button>
-                        <Button layoutX="64.0" layoutY="400.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="130.0" text="Choose file">
+                        <Button fx:id="chooseFile" layoutX="64.0" layoutY="400.0" mnemonicParsing="false" onAction="#chooseImg" prefHeight="39.0" prefWidth="130.0" text="Choose file">
                      <font>
                         <Font size="16.0" />
                      </font></Button>
+                  <TextField fx:id="txt_pType" layoutX="63.0" layoutY="140.0" />
                     </children>
                 </AnchorPane>
             </children></AnchorPane>

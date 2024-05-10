@@ -73,7 +73,7 @@
         </AnchorPane>
         <AnchorPane id="mainPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/HomePage.css">
             <children>
-                <TableView fx:id="TableCart" layoutX="100.0" layoutY="60.0" prefHeight="427.0" prefWidth="940.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
+                <TableView fx:id="TableCart" layoutX="124.0" layoutY="60.0" prefHeight="427.0" prefWidth="940.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
                     <columns>
                         <TableColumn fx:id="pIDCol" prefWidth="120.0" text="ProductID" />
                         <TableColumn fx:id="pNameCol" prefWidth="370.0" text="Product" />
