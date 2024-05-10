@@ -7,18 +7,23 @@
     <list default="true" id="20258a6c-0b47-43f7-abf6-04a25cecf102" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/AddProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/AddProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/LogOutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/LogOutController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MainPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/PaymentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MainPageSellerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MenuBarMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/HelpMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProductInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProductInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProfilePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/StockController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/SQLConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/SQLConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/AddProductPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/AddProductPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/Button.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/Button.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/Cart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/Cart.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/PaymentPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/PaymentPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/MainPageSeller.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/MainPageSeller.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/ProductInfo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/ProductInfo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/ProfilePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/ProfilePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/ProfilePageSeller.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/ProfilePageSeller.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/Shipped.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/Shipped.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +45,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "hungngoiu"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/httgiang/Automotive-Parts-ECom.git",
+    "accountId": "2a6b74b5-6bb0-4ed5-9da1-c7c7c1199439"
+  }
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -129,6 +146,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -157,7 +182,8 @@
       <workItem from="1714984305077" duration="35969000" />
       <workItem from="1715060149047" duration="22456000" />
       <workItem from="1715237598386" duration="1732000" />
-      <workItem from="1715240138533" duration="15793000" />
+      <workItem from="1715240138533" duration="25853000" />
+      <workItem from="1715364493278" duration="71000" />
     </task>
     <servers />
   </component>
@@ -169,7 +195,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProfilePageController.java</url>
-          <line>95</line>
+          <line>97</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

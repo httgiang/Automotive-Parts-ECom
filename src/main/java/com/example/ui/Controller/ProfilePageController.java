@@ -1,15 +1,13 @@
 package com.example.ui.Controller;
 
-import com.example.ui.Entity.Cart;
 import com.example.ui.Entity.User;
 import com.example.ui.SQLConnection;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 
 import javax.swing.*;
@@ -21,7 +19,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class ProfilePageController extends MenuBarMethods {
+public class ProfilePageController extends HelpMethods {
 
 
     @FXML
@@ -46,7 +44,10 @@ public class ProfilePageController extends MenuBarMethods {
     private TextField txt_pincode;
     @FXML
     private ImageView profileImg;
-
+    @FXML
+    private AnchorPane rootPur;
+    @FXML
+    private AnchorPane rootSel;
 
     @FXML
     private void updateInformation(){
@@ -89,9 +90,10 @@ public class ProfilePageController extends MenuBarMethods {
                     pst.setString(1, userEmail);
                     rs = pst.executeQuery();
                     if (rs.next()) {
+                        setUneditable(rootPur);
                         txt_address.setText(rs.getString("address"));
                     }
-                    return;
+
                 } else {
                     String querySeller = "SELECT * FROM SELLERS WHERE sellerEmail = ?";
                     pst = con.prepareStatement(querySeller);
@@ -99,11 +101,14 @@ public class ProfilePageController extends MenuBarMethods {
                     rs = pst.executeQuery();
 
                     if (rs.next()) {
+                        setUneditable(rootSel);
                         txt_info.setText(rs.getString("sellerInfo"));
                         txt_bank.setText(rs.getString("sellerBankAccount"));
                     }
-                    return;
                 }
+
+
+
             }
             JOptionPane.showMessageDialog(null, "Successfully show info!");
         } catch (Exception e){
@@ -124,7 +129,6 @@ public class ProfilePageController extends MenuBarMethods {
             profileImg.setPreserveRatio(false);
         }
     }
-
 
     @FXML
     public void initialize() throws FileNotFoundException {

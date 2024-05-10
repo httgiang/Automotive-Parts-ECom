@@ -3,15 +3,10 @@ package com.example.ui.Controller;
 import com.example.ui.Entity.User;
 import com.example.ui.SQLConnection;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -21,32 +16,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 
-public class AddProductController extends MenuBarMethods {
+public class AddProductController extends HelpMethods {
     Connection con = null;
     ResultSet rs = null;
     PreparedStatement pst = null;
-
-    @FXML
-    private ImageView homeButton;
-
-    @FXML
-    private Button logOutButton;
-
-    @FXML
-    private Button orderButton;
-
-    @FXML
-    private TextField pImage;
-
-    @FXML
-    private Button p_addButton;
 
 
     @FXML
     private TextField txt_pDes;
 
-    @FXML
-    private TextField txt_pID;
 
     @FXML
     private TextField txt_pName;
@@ -97,19 +75,18 @@ public class AddProductController extends MenuBarMethods {
     @FXML
     private void insertData() {
         con = SQLConnection.connectDb();
-        String insert = "INSERT INTO PRODUCTS(productID, sellerEmail, pName, pType, pInfo, pPrice, pStockQuantity, pImage) VALUES(?,?,?,?,?,?,?,?)";
+        String insert = "INSERT INTO PRODUCTS(sellerEmail, pName, pType, pInfo, pPrice, pStockQuantity, pImage) VALUES(?,?,?,?,?,?,?)";
         try {
             pst = con.prepareStatement(insert);
-            pst.setString(1, txt_pID.getText());
-            pst.setString(2, sellerEmail);
-            pst.setString(3, txt_pName.getText());
-            pst.setString(4, txt_pType.getText());
-            pst.setString(5, txt_pDes.getText());
-            pst.setFloat(6, Float.parseFloat(txt_pPrice.getText()));
-            pst.setInt(7, Integer.parseInt(txt_pQuan.getText()));
-            pst.setBytes(8, getImageData());
+            pst.setString(1, sellerEmail);
+            pst.setString(2, txt_pName.getText());
+            pst.setString(3, txt_pType.getText());
+            pst.setString(4, txt_pDes.getText());
+            pst.setFloat(5, Float.parseFloat(txt_pPrice.getText()));
+            pst.setInt(6, Integer.parseInt(txt_pQuan.getText()));
+            pst.setBytes(7, getImageData());
             pst.execute();
-        JOptionPane.showMessageDialog(null, "Add successfully");
+            JOptionPane.showMessageDialog(null, "Add successfully");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
             e.printStackTrace();

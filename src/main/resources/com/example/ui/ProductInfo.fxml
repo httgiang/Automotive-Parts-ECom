@@ -4,10 +4,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.ProductInfoController">
+<AnchorPane prefHeight="250.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.ProductInfoController">
    <children>
-      <TextField fx:id="txt_money" layoutX="75.0" layoutY="159.0" prefHeight="26.0" prefWidth="150.0" />
-      <TextField fx:id="txt_pName" layoutX="25.0" layoutY="121.0" prefHeight="26.0" prefWidth="250.0" />
-      <ImageView fx:id="imgProd" fitHeight="102.0" fitWidth="250.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="txt_money" layoutX="75.0" layoutY="202.0" prefHeight="26.0" prefWidth="150.0" />
+      <TextField fx:id="txt_pName" layoutX="26.0" layoutY="164.0" prefHeight="26.0" prefWidth="250.0" />
+      <ImageView fx:id="imgProd" fitHeight="140.0" fitWidth="250.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

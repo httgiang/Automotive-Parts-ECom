@@ -22,7 +22,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class CartController extends MenuBarMethods implements Initializable {
+public class CartController extends HelpMethods implements Initializable {
     Connection con = null;
     ResultSet rs = null;
     PreparedStatement pst = null;

@@ -1,5 +1,6 @@
 package com.example.ui.Controller;
 
+import com.example.ui.Entity.User;
 import com.example.ui.SQLConnection;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -23,7 +24,8 @@ public class ProductInfoController {
 
     @FXML
     private TextField txt_pName;
-
+    String type = User.getInstance().getType();
+    String email = User.getInstance().getType();
 
     public void initProductInfo(String productId) throws FileNotFoundException {
         this.productId = productId;
