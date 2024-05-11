@@ -32,7 +32,7 @@ public class MainPageController extends HelpMethods implements Initializable {
     private void showProduct(AnchorPane anchorPane) {
         String select = "SELECT * FROM PRODUCTS";
         int width = 300;
-        int height = 300;
+        int height = 250;
         int xIndex = 0;
         int yIndex = 0;
         List<AnchorPane> productPaneList = new ArrayList<AnchorPane>();
@@ -90,7 +90,7 @@ public class MainPageController extends HelpMethods implements Initializable {
             } catch (Exception e){
                 e.printStackTrace();
             }
-            return (int) (Math.ceil((double) countPur / 4)) * 300;
+            return (int) (Math.ceil((double) countPur / 4)) * 250;
         } else {
             String select = "SELECT * FROM PRODUCTS WHERE sellerEmail = ?";
             int countSel = 0;
@@ -104,7 +104,7 @@ public class MainPageController extends HelpMethods implements Initializable {
             } catch (Exception e){
                 e.printStackTrace();
             }
-            return (int) (Math.ceil((double) countSel / 4)) * 300;
+            return (int) (Math.ceil((double) countSel / 4)) * 250;
         }
 
     }

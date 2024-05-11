@@ -22,8 +22,6 @@ public class SignUpController extends HelpMethods {
     ResultSet rs = null;
     PreparedStatement pst = null;
     private Alert alert;
-    private Stage stage;
-    private Scene scene;
     @FXML
     private TextField address;
 
