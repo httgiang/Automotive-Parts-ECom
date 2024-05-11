@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="753e4c77-4bf1-4747-a3bc-d20332ce7f10" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/HelpMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/HelpMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MainPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProductInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProductInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ViewProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ViewProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/ProductInfo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/ProductInfo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/ViewProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/ViewProduct.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/ViewProductSeller.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/ViewProductSeller.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/css/HomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/css/HomePage.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,12 +58,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "ProductInfo",
+    "git-widget-placeholder": "OrderSeller",
     "last_opened_file_path": "D:/AutomotivePartsWeb",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>

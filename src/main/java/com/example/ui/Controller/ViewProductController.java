@@ -47,6 +47,7 @@ public class ViewProductController extends HelpMethods {
 
     public void setProductID(String productID) {
         this.productID = productID;
+        showProductInformation(productID);
     }
 
     public void showProductInformation(String productID) {
@@ -91,6 +92,7 @@ public class ViewProductController extends HelpMethods {
                 pst.setString(2, txt_productID.getText());
                 pst.setInt(3, Integer.parseInt(txt_selectQuantity.getText()));
                 pst.execute();
+                JOptionPane.showMessageDialog(null, "Successfully add to cart!");
             } catch (Exception e) {
                 e.printStackTrace();
             }
