@@ -1,13 +1,22 @@
 package com.example.ui.Controller;
 
+import com.example.ui.Entity.Cart;
 import com.example.ui.Entity.User;
 import com.example.ui.SQLConnection;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
+import java.awt.event.MouseEvent;
 import java.net.URL;
 import java.sql.*;
 import java.util.ArrayList;
@@ -24,7 +33,7 @@ public class MainPageController extends HelpMethods implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         con = SQLConnection.connectDb();
-        AnchorPane anchorPane = createAnchorPane(con);
+        AnchorPane anchorPane = getAnchorPane(con);
         scrollPane.setContent(anchorPane);
         showProduct(anchorPane);
     }
@@ -46,7 +55,7 @@ public class MainPageController extends HelpMethods implements Initializable {
                 AnchorPane pane = loader.load();
                 productPaneList.add(pane);
 
-                ProductInfoController controller  = loader.getController();
+                ProductInfoController controller = loader.getController();
                 controller.initProductInfo(productId);
             }
             for (AnchorPane pane : productPaneList) {
@@ -67,13 +76,12 @@ public class MainPageController extends HelpMethods implements Initializable {
         }
     }
 
-    private AnchorPane createAnchorPane(Connection con) {
+    private AnchorPane getAnchorPane(Connection con) {
         AnchorPane anchorPane = new AnchorPane();
         anchorPane.setLayoutX(0);
         anchorPane.setLayoutY(0);
         anchorPane.setPrefWidth(1200);
         anchorPane.setPrefHeight(getAnchorHeight());
-
         return anchorPane;
     }
 

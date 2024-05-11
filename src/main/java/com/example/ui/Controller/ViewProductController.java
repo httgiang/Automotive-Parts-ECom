@@ -13,9 +13,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class ViewProductController extends MenuBarMethods {
+public class ViewProductController extends HelpMethods {
     private Alert alert;
     PreparedStatement pst = null;
+    private String productID;
     @FXML
     private TextField txt_productID;
 
@@ -40,18 +41,22 @@ public class ViewProductController extends MenuBarMethods {
     @FXML
     private ImageView productImg;
 
-    private void showProductInformation() {
+    public String getProductID() {
+        return productID;
+    }
+
+    public void setProductID(String productID) {
+        this.productID = productID;
+    }
+
+    public void showProductInformation(String productID) {
         try {
-            String productID = Products.getInstance().getProductID();
-
             Connection con = SQLConnection.connectDb();
-
+            System.out.println(productID);
             String sql = "SELECT * FROM PRODUCTS WHERE productID = ?";
             assert con != null;
             PreparedStatement pst = con.prepareStatement(sql);
-
             pst.setString(1, productID);
-
             ResultSet rs = pst.executeQuery();
             if (rs.next()) {
                 txt_productID.setText(productID);
@@ -68,6 +73,7 @@ public class ViewProductController extends MenuBarMethods {
         }
     }
 
+    @FXML
     private void addToCart(ActionEvent event) {
         if (txt_selectQuantity.getText().isEmpty()) {
             alert = new Alert(Alert.AlertType.ERROR);
@@ -90,8 +96,6 @@ public class ViewProductController extends MenuBarMethods {
             }
         }
     }
-    public void initialize() {
-        showProductInformation();
-    }
+
 }
 

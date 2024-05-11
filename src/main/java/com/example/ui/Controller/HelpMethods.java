@@ -75,6 +75,14 @@ public class HelpMethods {
     public void switchToLogout(ActionEvent event) {
         switchToScene(event, "LogOut.fxml");
     }
+    @FXML
+    public void switchToViewProduct(ActionEvent event){
+        if (User.getInstance().getType().equals("Purchaser")) {
+            switchToScene(event, "ViewProduct.fxml");
+        } else {
+            switchToScene(event, "ViewProductSeller.fxml");
+        }
+    }
 
     public static void setUneditable(Node root) {
         root.lookupAll(".text-field").forEach(node -> {

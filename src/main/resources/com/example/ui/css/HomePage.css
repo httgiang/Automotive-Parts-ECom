@@ -107,3 +107,6 @@
     -fx-gap: 10;
 }
 
+.productInfoAnchorPane:hover{
+    -fx-background-color: white;
+}

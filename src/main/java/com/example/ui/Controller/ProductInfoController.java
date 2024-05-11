@@ -1,11 +1,17 @@
 package com.example.ui.Controller;
 
+import com.example.ui.Entity.Cart;
 import com.example.ui.Entity.User;
 import com.example.ui.SQLConnection;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.ByteArrayInputStream;
 import java.io.FileNotFoundException;
@@ -14,7 +20,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ProductInfoController {
+public class ProductInfoController extends HelpMethods{
     private String productId;
     @FXML
     private ImageView imgProd;
@@ -24,8 +30,9 @@ public class ProductInfoController {
 
     @FXML
     private TextField txt_pName;
-    String type = User.getInstance().getType();
-    String email = User.getInstance().getType();
+    @FXML
+    private AnchorPane productInfoPane;
+
 
     public void initProductInfo(String productId) throws FileNotFoundException {
         this.productId = productId;
@@ -59,6 +66,10 @@ public class ProductInfoController {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+    @FXML
+    public void onViewButtonClicked(){
+
     }
 
 
