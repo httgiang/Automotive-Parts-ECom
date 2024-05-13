@@ -5,21 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20258a6c-0b47-43f7-abf6-04a25cecf102" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/LogOutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/LogOutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MenuBarMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MenuBarMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProfilePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Entity/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Entity/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/SQLConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/SQLConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/Cart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/Cart.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/MainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/MainPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/ProfilePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/ProfilePage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/css/table_view.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/css/table_view.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Entity/OrderCustomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Entity/Stock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProductInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProductInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/StockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/SQLConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/SQLConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/Order.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/Order.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/Stock.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/Stock.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,17 +23,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Interface" />
-        <option value="Interface" />
-        <option value="JavaFXApplication" />
-        <option value="FxmlFile" />
         <option value="CSS File" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -55,16 +53,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
+    "Application.HelloApplication.executor": "Run",
+    "Application.MainApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "ProfilePage",
-    "last_opened_file_path": "D:/Smart Scale Project",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/pro",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -73,49 +70,36 @@
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.49885058",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.MainApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;mainPageView&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/AutomotiveParts&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.49885058&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\AutomotiveParts\src\main\resources" />
-      <recent name="D:\UI\src\main\resources\com\example\ui" />
-      <recent name="D:\UI\src\main\resources\com\example\ui\fxml" />
-      <recent name="D:\UI\src\main\resources\com\example\ui\css" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.example.ui" />
+      <recent name="F:\pdm\src\main\resources\com\example\ui" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MainApplication">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.ui.HelloApplication" />
+      <module name="UI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.ui.MainApplication" />
       <module name="UI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.ui.Controller.*" />
+          <option name="PATTERN" value="com.example.ui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,6 +110,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainApplication" />
+        <item itemvalue="Application.HelloApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -147,36 +132,24 @@
       <workItem from="1714381349385" duration="20518000" />
       <workItem from="1714470141322" duration="2342000" />
       <workItem from="1714545746543" duration="6739000" />
-      <workItem from="1714554677986" duration="14125000" />
-      <workItem from="1714612302477" duration="916000" />
-      <workItem from="1714617576472" duration="7013000" />
-      <workItem from="1714670662454" duration="7275000" />
-      <workItem from="1714715411709" duration="25156000" />
-      <workItem from="1714805475253" duration="33077000" />
-      <workItem from="1714953601567" duration="15145000" />
-      <workItem from="1714984305077" duration="35969000" />
-      <workItem from="1715060149047" duration="22456000" />
+      <workItem from="1714554677986" duration="4979000" />
+      <workItem from="1714622508600" duration="2370000" />
+      <workItem from="1714630788096" duration="1559000" />
+      <workItem from="1714727311625" duration="407000" />
+      <workItem from="1714744614794" duration="1214000" />
+      <workItem from="1714787706783" duration="597000" />
+      <workItem from="1714803473113" duration="1235000" />
+      <workItem from="1714874247101" duration="597000" />
+      <workItem from="1715350438772" duration="399000" />
+      <workItem from="1715350856348" duration="5437000" />
+      <workItem from="1715394250997" duration="595000" />
+      <workItem from="1715485527461" duration="493000" />
+      <workItem from="1715604124883" duration="7137000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProfilePageController.java</url>
-          <line>95</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/ui/Controller/CartController.java</url>
-          <line>126</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
