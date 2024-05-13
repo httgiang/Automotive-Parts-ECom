@@ -31,17 +31,9 @@ public class SignUpController extends HelpMethods {
     @FXML
     private TextField bankAcc;
 
-    @FXML
-    private TextField confirmPassword;
-
-    @FXML
-    private Button forgotPassword;
 
     @FXML
     private Label labelBankAcc;
-
-    @FXML
-    private Button li_logInButton;
 
     @FXML
     private TextField li_password;
@@ -99,7 +91,6 @@ public class SignUpController extends HelpMethods {
         } else {
             con = SQLConnection.connectDb();
             String select = "SELECT email, password FROM ACCOUNTS WHERE email = ? AND password = ?";
-
             try{
                 pst = con.prepareStatement(select);
                 pst.setString(1, li_userEmail.getText());

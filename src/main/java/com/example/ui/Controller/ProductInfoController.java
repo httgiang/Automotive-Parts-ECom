@@ -25,7 +25,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ProductInfoController extends HelpMethods{
-    private String productId;
+    private int productId;
     @FXML
     private ImageView imgProd;
 
@@ -38,7 +38,7 @@ public class ProductInfoController extends HelpMethods{
     private AnchorPane productInfoPane;
 
 
-    public void initProductInfo(String productId) throws FileNotFoundException {
+    public void initProductInfo(int productId) throws FileNotFoundException {
         this.productId = productId;
         loadDataFromProducts();
     }
@@ -49,20 +49,12 @@ public class ProductInfoController extends HelpMethods{
             assert con != null;
             String sql = "SELECT * FROM PRODUCTS WHERE productID = ?";
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, productId);
+            pst.setInt(1, productId);
             ResultSet rs = pst.executeQuery();
             if (rs.next()) {
                 txt_pName.setText(rs.getString("pName"));
                 txt_money.setText(rs.getString("pPrice"));
-                byte[] imgData = rs.getBytes("pImage");
-                if(imgData != null){
-                    ByteArrayInputStream inputStream = new ByteArrayInputStream(rs.getBytes("pImage"));
-                    Image image = new Image(inputStream);
-                    imgProd.setImage(image);
-                    imgProd.setPreserveRatio(false);
-                } else {
-                    imgProd.setImage(null);
-                }
+                showProductImg(imgProd, rs);
             }
             txt_pName.setEditable(false);
             txt_money.setEditable(false);
@@ -74,7 +66,7 @@ public class ProductInfoController extends HelpMethods{
     @FXML
     public void onViewButtonClicked(ActionEvent event){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/ui/ViewProduct.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/ui/" + getViewProductPane()));
             Parent root = loader.load();
 
             ViewProductController controller = loader.getController();
@@ -86,6 +78,14 @@ public class ProductInfoController extends HelpMethods{
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    private String getViewProductPane(){
+        if (User.getInstance().getType().equals("Purchaser")) {
+            return "ViewProduct.fxml";
+        } else {
+            return "ViewProductSeller.fxml";
         }
     }
 

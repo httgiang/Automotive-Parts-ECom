@@ -9,7 +9,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+
+import java.io.ByteArrayInputStream;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 
 public class HelpMethods {
@@ -75,14 +81,7 @@ public class HelpMethods {
     public void switchToLogout(ActionEvent event) {
         switchToScene(event, "LogOut.fxml");
     }
-    @FXML
-    public void switchToViewProduct(ActionEvent event){
-        if (User.getInstance().getType().equals("Purchaser")) {
-            switchToScene(event, "ViewProduct.fxml");
-        } else {
-            switchToScene(event, "ViewProductSeller.fxml");
-        }
-    }
+
 
     public static void setUneditable(Node root) {
         root.lookupAll(".text-field").forEach(node -> {
@@ -93,5 +92,17 @@ public class HelpMethods {
                 ((TextArea) node).setEditable(false);
             }
         });
+    }
+
+    public void showProductImg(ImageView imageView, ResultSet rs) throws SQLException {
+        byte[] imgData = rs.getBytes("pImage");
+        if(imgData != null){
+            ByteArrayInputStream inputStream = new ByteArrayInputStream(imgData);
+            Image image = new Image(inputStream);
+            imageView.setImage(image);
+            imageView.setPreserveRatio(false);
+        } else {
+            imageView.setImage(null);
+        }
     }
 }

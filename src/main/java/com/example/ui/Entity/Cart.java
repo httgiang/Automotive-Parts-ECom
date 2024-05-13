@@ -6,7 +6,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.image.ImageView;
 
 public class Cart {
-    private String pID;
+    private int pID;
     private String pName;
     private Integer quantity;
     private Float amount;
@@ -14,7 +14,7 @@ public class Cart {
 
     private CheckBox select;
 
-    public Cart(String pID, String pName, int quantity, float price) {
+    public Cart(int pID, String pName, int quantity, float price) {
         this.pID = pID;
         this.pName = pName;
         this.quantity = quantity; //num of products of the same type
@@ -23,7 +23,7 @@ public class Cart {
         this.select = new CheckBox();
     }
 
-    public String getPID() {
+    public int getPID() {
         return pID;
     }
 
@@ -47,7 +47,7 @@ public class Cart {
         return select;
     }
 
-    public void setPID(String pID) {
+    public void setPID(int pID) {
         this.pID = pID;
     }
 

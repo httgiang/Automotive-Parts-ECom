@@ -29,7 +29,7 @@ public class CartController extends HelpMethods implements Initializable {
     @FXML
     private TableView<Cart> TableCart;
     @FXML
-    private TableColumn<Cart, String> pIDCol;
+    private TableColumn<Cart, Integer> pIDCol;
 
     @FXML
     private TableColumn<Cart, String> pNameCol;
@@ -58,15 +58,18 @@ public class CartController extends HelpMethods implements Initializable {
                 productsPaid.add(cartRow);
             }
         }
-        insertValuesIntoOrder(productsPaid);
-        insertValuesIntoOrderItems(productsPaid);
-        TableCart.getItems().removeAll(productsPaid);
-        for(Cart cartRow : productsPaid){
-            removeRecord(cartRow);
+
+        if(!productsPaid.isEmpty()){
+            insertValuesIntoOrder();
+            insertValuesIntoOrderItems(productsPaid);
+            TableCart.getItems().removeAll(productsPaid);
+            for(Cart cartRow : productsPaid){
+                removeRecord(cartRow);
+            }
         }
     }
 
-    private void insertValuesIntoOrder(ObservableList<Cart> prodList) {
+    private void insertValuesIntoOrder() {
         con = SQLConnection.connectDb();
         String insertOrder = "INSERT INTO ORDERS(purchaserEmail) VALUES(?)";
         try {
@@ -79,15 +82,20 @@ public class CartController extends HelpMethods implements Initializable {
         }
     }
     private void insertValuesIntoOrderItems(ObservableList<Cart> prodList) {
+        int OID = getOID();
         con = SQLConnection.connectDb();
-        String insertOrderItems = "INSERT INTO ORDER_ITEMS(productId, quantity) VALUES(?,?)";
+        String insertOrderItems = "INSERT INTO ORDER_ITEMS(orderID, productID, quantity) VALUES(?,?,?);";
+
         try {
             for(Cart prod : prodList) {
                 if (prod.getSelect().isSelected()) {
+                    System.out.println(getOID());
+                    System.out.println(prod.getPID());
                     pst = con.prepareStatement(insertOrderItems);
-                    pst.setString(1, prod.getPID());
-                    pst.setInt(2, prod.getQuantity());
-                    pst.execute();
+                    pst.setInt(1, OID);
+                    pst.setInt(2, prod.getPID());
+                    pst.setInt(3, prod.getQuantity());
+                    pst.executeUpdate();
                 }
             }
         } catch (SQLException e) {
@@ -96,17 +104,18 @@ public class CartController extends HelpMethods implements Initializable {
         }
     }
 
-        @FXML
+    @FXML
     private void refreshTable(){
         cartList.clear();
         String query = " SELECT P.productID, P.pName, C.productQuantity, P.pPrice FROM PRODUCTS P, CART C WHERE P.productID = C.productID AND C.purchaserEmail = ?";
+
         try{
             pst = con.prepareStatement(query);
             pst.setString(1, userEmail);
             rs = pst.executeQuery();
 
             while(rs.next()){
-                String pID = rs.getString("productID");
+                int pID = Integer.parseInt(rs.getString("productID"));
                 String pName = rs.getString("pName");
                 int pQuantity = rs.getInt("productQuantity");
                 float pPrice = rs.getFloat("pPrice");
@@ -184,7 +193,7 @@ public class CartController extends HelpMethods implements Initializable {
         try {
             pst =  con.prepareStatement(query);
             pst.setString(1, userEmail);
-            pst.setString(2, c.getPID());
+            pst.setInt(2, c.getPID());
             pst.execute();
             refreshTable();
         } catch (Exception e) {
@@ -192,5 +201,20 @@ public class CartController extends HelpMethods implements Initializable {
         }
     }
 
+    private int getOID(){
+        con = SQLConnection.connectDb();
+        String queryOID = " SELECT TOP (1) orderID FROM ORDERS ORDER BY orderID DESC";
+        int OID = 0;
+        try {
+            pst =  con.prepareStatement(queryOID);
+            rs = pst.executeQuery();
+            if(rs.next()){
+                OID = rs.getInt("orderID");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return OID;
+    }
 }
 

@@ -49,7 +49,7 @@ public class MainPageController extends HelpMethods implements Initializable {
             PreparedStatement pst = con.prepareStatement(select);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
-                String productId = rs.getString("productID");
+                int productId = rs.getInt("productID");
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/ui/ProductInfo.fxml"));
 
                 AnchorPane pane = loader.load();
@@ -114,7 +114,6 @@ public class MainPageController extends HelpMethods implements Initializable {
             }
             return (int) (Math.ceil((double) countSel / 4)) * 250;
         }
-
     }
 }
 
