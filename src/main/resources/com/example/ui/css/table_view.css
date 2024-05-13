@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .largeLabel{
     -fx-text-fill: #314D6E;
     -fx-font-family: 'Poppins';
@@ -17,6 +18,17 @@
     -fx-font-style: normal;
     -fx-font-weight: 700;
     -fx-line-height: 24px;
+=======
+.table-view{
+    -fx-background-color:#FFFFFF ;
+}
+#Action, #NameColumn, #DateColumn,#PatientContactNumber, #DescriptionColumn, #AdditionalNoteColumn, #MoneyPayColumn, #laboratoryIdColumn, #contactNumberColumn, #AddressPatient, #QuantityColumn, #DateLaboColumn, #PatientName{
+    -fx-font-size: 17;
+}
+.table-view .column-header{
+    -fx-background-color: #add3d3;
+    -fx-text-fill: white;
+>>>>>>> b51505f6c14ae0b49918806d774961c1f9a0b1ed
 }
 .table-view .column-header-background{
     -fx-background-color: transparent;
@@ -24,6 +36,7 @@
 .table-view .column-header-background.label{
     -fx-text-fill: white;
 }
+<<<<<<< HEAD
 .table-row-cell-even{
     -fx-background-color: white;
 }
@@ -51,3 +64,11 @@
 }
 
 
+=======
+.table-row-cell{
+    -fx-background-color: white;
+}
+.table-row-cell-odd{
+    -fx-background-color:#F7F6FE;
+}
+>>>>>>> b51505f6c14ae0b49918806d774961c1f9a0b1ed

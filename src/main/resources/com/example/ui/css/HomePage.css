@@ -41,6 +41,21 @@
     -fx-text-align: center;
     -fx-text-fill: #FFFFFF;
 }
+#CartName{
+    -fx-position: absolute;
+    -fx-max-width: 300px;
+    -fx-max-height: 54px;
+    -fx-left: 305px;
+    -fx-top: 240px;
+
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-font-size: 36px;
+    -fx-line-height: 54px;
+
+    -fx-text-fill: #272C98 ;
+}
 
 .moused-moved:hover{
     -fx-background-color: #E4E4E4;
