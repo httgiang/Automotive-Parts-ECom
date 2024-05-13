@@ -17,13 +17,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class SignUpController extends MenuBarMethods {
+public class SignUpController extends HelpMethods {
     Connection con = null;
     ResultSet rs = null;
     PreparedStatement pst = null;
     private Alert alert;
-    private Stage stage;
-    private Scene scene;
     @FXML
     private TextField address;
 
@@ -33,17 +31,9 @@ public class SignUpController extends MenuBarMethods {
     @FXML
     private TextField bankAcc;
 
-    @FXML
-    private TextField confirmPassword;
-
-    @FXML
-    private Button forgotPassword;
 
     @FXML
     private Label labelBankAcc;
-
-    @FXML
-    private Button li_logInButton;
 
     @FXML
     private TextField li_password;
@@ -101,7 +91,6 @@ public class SignUpController extends MenuBarMethods {
         } else {
             con = SQLConnection.connectDb();
             String select = "SELECT email, password FROM ACCOUNTS WHERE email = ? AND password = ?";
-
             try{
                 pst = con.prepareStatement(select);
                 pst.setString(1, li_userEmail.getText());

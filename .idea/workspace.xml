@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20258a6c-0b47-43f7-abf6-04a25cecf102" name="Changes" comment="" />
+    <list default="true" id="753e4c77-4bf1-4747-a3bc-d20332ce7f10" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/HelpMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/HelpMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/MainPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProductInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProductInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ViewProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ViewProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/Entity/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/Entity/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/SQLConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/SQLConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/AddProductPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/AddProductPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/OrderSeller.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/OrderSeller.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/Stock.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/Stock.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ui/ViewProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ui/ViewProduct.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,13 +39,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hungngoiu&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/httgiang/Automotive-Parts-ECom.git&quot;,
+    &quot;accountId&quot;: &quot;2a6b74b5-6bb0-4ed5-9da1-c7c7c1199439&quot;
+  }
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -44,53 +63,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ProfilePage&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Smart Scale Project&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.49885058&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  &lt;component name=&quot;PropertiesComponent&quot;&gt;{
-  &amp;quot;keyToString&amp;quot;: {
-    &amp;quot;Application.MainApplication.executor&amp;quot;: &amp;quot;Run&amp;quot;,
-    &amp;quot;RunOnceActivity.OpenProjectViewOnStart&amp;quot;: &amp;quot;true&amp;quot;,
-    &amp;quot;RunOnceActivity.ShowReadmeOnStart&amp;quot;: &amp;quot;true&amp;quot;,
-    &amp;quot;SHARE_PROJECT_CONFIGURATION_FILES&amp;quot;: &amp;quot;true&amp;quot;,
-    &amp;quot;WebServerToolWindowFactoryState&amp;quot;: &amp;quot;false&amp;quot;,
-    &amp;quot;git-widget-placeholder&amp;quot;: &amp;quot;mainPageView&amp;quot;,
-    &amp;quot;last_opened_file_path&amp;quot;: &amp;quot;D:/AutomotiveParts&amp;quot;,
-    &amp;quot;list.type.of.created.stylesheet&amp;quot;: &amp;quot;CSS&amp;quot;,
-    &amp;quot;node.js.detected.package.eslint&amp;quot;: &amp;quot;true&amp;quot;,
-    &amp;quot;node.js.detected.package.tslint&amp;quot;: &amp;quot;true&amp;quot;,
-    &amp;quot;node.js.selected.package.eslint&amp;quot;: &amp;quot;(autodetect)&amp;quot;,
-    &amp;quot;node.js.selected.package.tslint&amp;quot;: &amp;quot;(autodetect)&amp;quot;,
-    &amp;quot;nodejs_package_manager_path&amp;quot;: &amp;quot;npm&amp;quot;,
-    &amp;quot;project.structure.last.edited&amp;quot;: &amp;quot;Global Libraries&amp;quot;,
-    &amp;quot;project.structure.proportion&amp;quot;: &amp;quot;0.15&amp;quot;,
-    &amp;quot;project.structure.side.proportion&amp;quot;: &amp;quot;0.49885058&amp;quot;,
-    &amp;quot;settings.editor.selected.configurable&amp;quot;: &amp;quot;preferences.JavaFX&amp;quot;,
-    &amp;quot;vue.rearranger.settings.migration&amp;quot;: &amp;quot;true&amp;quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "ProductInfo",
+    "last_opened_file_path": "D:/AutomotivePartsWeb",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\TEMP\src\main\resources" />
       <recent name="D:\AutomotiveParts\src\main\resources" />
       <recent name="D:\UI\src\main\resources\com\example\ui" />
       <recent name="D:\UI\src\main\resources\com\example\ui\fxml" />
@@ -131,7 +121,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="20258a6c-0b47-43f7-abf6-04a25cecf102" name="Changes" comment="" />
+      <changelist id="753e4c77-4bf1-4747-a3bc-d20332ce7f10" name="Changes" comment="" />
       <created>1714156759055</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -155,7 +145,10 @@
       <workItem from="1714953601567" duration="15145000" />
       <workItem from="1714984305077" duration="35969000" />
       <workItem from="1715060149047" duration="22456000" />
-      <workItem from="1715355928642" duration="8000" />
+      <workItem from="1715237598386" duration="1732000" />
+      <workItem from="1715240138533" duration="25853000" />
+      <workItem from="1715364493278" duration="71000" />
+      <workItem from="1715590278289" duration="11241000" />
     </task>
     <servers />
   </component>
@@ -167,13 +160,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/ui/Controller/ProfilePageController.java</url>
-          <line>95</line>
+          <line>97</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/ui/Controller/CartController.java</url>
-          <line>126</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

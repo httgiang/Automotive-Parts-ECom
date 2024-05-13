@@ -3,26 +3,24 @@ package com.example.ui.Controller;
 import com.example.ui.Entity.User;
 import com.example.ui.SQLConnection;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 
 import javax.swing.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class ProfilePageController extends MenuBarMethods {
+public class ProfilePageController extends HelpMethods {
 
-    @FXML
-    private Label labelAddress;
-
-    @FXML
-    private Label labelBank;
-
-    @FXML
-    private Label labelInfo;
 
     @FXML
     private TextArea txt_address;
@@ -44,9 +42,12 @@ public class ProfilePageController extends MenuBarMethods {
 
     @FXML
     private TextField txt_pincode;
-
     @FXML
-    private Button updateButton;
+    private ImageView profileImg;
+    @FXML
+    private AnchorPane rootPur;
+    @FXML
+    private AnchorPane rootSel;
 
     @FXML
     private void updateInformation(){
@@ -89,9 +90,10 @@ public class ProfilePageController extends MenuBarMethods {
                     pst.setString(1, userEmail);
                     rs = pst.executeQuery();
                     if (rs.next()) {
+                        setUneditable(rootPur);
                         txt_address.setText(rs.getString("address"));
                     }
-                    return;
+
                 } else {
                     String querySeller = "SELECT * FROM SELLERS WHERE sellerEmail = ?";
                     pst = con.prepareStatement(querySeller);
@@ -99,11 +101,14 @@ public class ProfilePageController extends MenuBarMethods {
                     rs = pst.executeQuery();
 
                     if (rs.next()) {
+                        setUneditable(rootSel);
                         txt_info.setText(rs.getString("sellerInfo"));
                         txt_bank.setText(rs.getString("sellerBankAccount"));
                     }
-                    return;
                 }
+
+
+
             }
             JOptionPane.showMessageDialog(null, "Successfully show info!");
         } catch (Exception e){
@@ -111,8 +116,22 @@ public class ProfilePageController extends MenuBarMethods {
         }
     }
 
+
     @FXML
-    public void initialize(){
+    private void chooseImg() throws FileNotFoundException {
+        FileChooser chooser = new FileChooser();
+        File file = chooser.showOpenDialog(null);
+        if (file != null) {
+            String absolutePath = file.getAbsolutePath();
+            InputStream stream = new FileInputStream(absolutePath);
+            Image img = new Image(stream);
+            profileImg.setImage(img);
+            profileImg.setPreserveRatio(false);
+        }
+    }
+
+    @FXML
+    public void initialize() throws FileNotFoundException {
         showUserInformation();
     }
 }

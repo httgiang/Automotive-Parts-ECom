@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.MainPageController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.AddProductController">
     <children>
         <AnchorPane id="menuBar" prefHeight="50.0" prefWidth="1200.0" stylesheets="@css/HomePage.css">
             <children>
@@ -86,32 +86,32 @@
                                 <Font name="System Bold" size="36.0" />
                             </font>
                         </Label>
-                        <Label layoutX="64.0" layoutY="72.0" styleClass="normalLabel" stylesheets="@css/addForm.css" text="Product ID" />
-                        <TextField fx:id="txt_pID" layoutX="64.0" layoutY="98.0" prefHeight="35.0" prefWidth="130.0" promptText="Product ID" />
-                        <TextField fx:id="txt_pName" layoutX="255.0" layoutY="98.0" prefHeight="35.0" prefWidth="360.0" promptText="Product Name" />
-                        <Label layoutX="256.0" layoutY="72.0" styleClass="normalLabel" stylesheets="@css/addForm.css" text="Product Name" />
-                        <TextField fx:id="txt_pDes" layoutX="64.0" layoutY="185.0" prefHeight="76.0" prefWidth="552.0" promptText="Description" />
-                        <Label layoutX="63.0" layoutY="159.0" styleClass="normalLabel" stylesheets="@css/addForm.css" text="Product Description" />
-                        <TextField fx:id="txt_pPrice" layoutX="64.0" layoutY="311.0" prefHeight="39.0" prefWidth="252.0" promptText="Price" />
-                        <Label layoutX="63.0" layoutY="286.0" styleClass="normalLabel" stylesheets="@css/addForm.css" text="Unit Price" />
-                        <Label layoutX="364.0" layoutY="286.0" styleClass="normalLabel" stylesheets="@css/addForm.css" text="Stock Quantity" />
-                        <TextField fx:id="txt_pQuan" layoutX="365.0" layoutY="311.0" prefHeight="39.0" prefWidth="252.0" promptText="Quantity" />
-                        <TextField fx:id="pImage" layoutX="227.0" layoutY="400.0" prefHeight="39.0" prefWidth="390.0" promptText="Import your file" />
-                        <Button fx:id="p_resetButton" layoutX="99.0" layoutY="467.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="104.0" styleClass="resetButton" stylesheets="@css/addForm.css" text="RESET" textFill="WHITE">
+                        <Label layoutX="65.0" layoutY="125.0" styleClass="normalLabel" stylesheets="@css/addForm.css" text="Product Type" />
+                        <TextField fx:id="txt_pName" layoutX="65.0" layoutY="80.0" prefHeight="35.0" prefWidth="552.0" promptText="Product Name" />
+                        <Label layoutX="65.0" layoutY="53.0" styleClass="normalLabel" stylesheets="@css/addForm.css" text="Product Name" />
+                        <TextField fx:id="txt_pDes" layoutX="67.0" layoutY="222.0" prefHeight="76.0" prefWidth="552.0" promptText="Description" />
+                        <Label layoutX="65.0" layoutY="196.0" styleClass="normalLabel" stylesheets="@css/addForm.css" text="Product Description" />
+                        <TextField fx:id="txt_pPrice" layoutX="67.0" layoutY="335.0" prefHeight="39.0" prefWidth="252.0" promptText="Price" />
+                        <Label layoutX="67.0" layoutY="309.0" styleClass="normalLabel" stylesheets="@css/addForm.css" text="Unit Price" />
+                        <Label layoutX="367.0" layoutY="309.0" styleClass="normalLabel" stylesheets="@css/addForm.css" text="Stock Quantity" />
+                        <TextField fx:id="txt_pQuan" layoutX="365.0" layoutY="335.0" prefHeight="39.0" prefWidth="252.0" promptText="Quantity" />
+                        <TextField fx:id="pImage" layoutX="227.0" layoutY="415.0" prefHeight="39.0" prefWidth="390.0" promptText="Import your file" />
+                        <Button fx:id="p_resetButton" layoutX="101.0" layoutY="476.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="104.0" styleClass="resetButton" stylesheets="@css/addForm.css" text="RESET" textFill="WHITE">
                             <font>
                                 <Font name="System Bold" size="18.0" />
                             </font>
                         </Button>
-                        <Label layoutX="64.0" layoutY="373.0" styleClass="normalLabel" stylesheets="@css/addForm.css" text="Product Image" />
-                        <Button fx:id="p_addButton" layoutX="409.0" layoutY="467.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="164.0" styleClass="AddButton" stylesheets="@css/addForm.css" text="ADD PRODUCT" textFill="WHITE">
+                        <Label layoutX="67.0" layoutY="388.0" styleClass="normalLabel" stylesheets="@css/addForm.css" text="Product Image" />
+                        <Button fx:id="p_addButton" layoutX="409.0" layoutY="476.0" mnemonicParsing="false" onAction="#insertData" prefHeight="39.0" prefWidth="164.0" styleClass="AddButton" stylesheets="@css/addForm.css" text="ADD PRODUCT" textFill="WHITE">
                             <font>
                                 <Font name="System Bold" size="18.0" />
                             </font>
                         </Button>
-                        <Button layoutX="64.0" layoutY="400.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="130.0" text="Choose file">
+                        <Button fx:id="chooseFile" layoutX="67.0" layoutY="415.0" mnemonicParsing="false" onAction="#chooseImg" prefHeight="39.0" prefWidth="130.0" text="Choose file">
                      <font>
                         <Font size="16.0" />
                      </font></Button>
+                  <TextField fx:id="txt_pType" layoutX="65.0" layoutY="152.0" prefHeight="35.0" prefWidth="552.0" promptText="Type" />
                     </children>
                 </AnchorPane>
             </children></AnchorPane>
