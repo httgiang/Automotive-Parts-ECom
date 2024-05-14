@@ -65,6 +65,7 @@ public class OrderSellerController extends HelpMethods implements Initializable 
                 "AND O.orderID = OI.orderID " +
                 "AND OI.productID = Pro.productID " +
                 "AND A.email = P.purchaserEmail " +
+                "AND OI.shipped = 0 "+
                 "AND Pro.sellerEmail = ? " +
                 "GROUP BY O.orderID, A.name, P.address, O.money;";
         try{
