@@ -47,6 +47,11 @@ public class CartController extends HelpMethods implements Initializable {
 
     ObservableList<Cart> cartList = FXCollections.observableArrayList();
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadData();
+    }
+
     @FXML
     public void onPayNowButtonClicked(ActionEvent event){
         ObservableList<Cart> productsPaid = FXCollections.observableArrayList();
@@ -120,9 +125,9 @@ public class CartController extends HelpMethods implements Initializable {
                 int pQuantity = rs.getInt("productQuantity");
                 float pPrice = rs.getFloat("pPrice");
                 cartList.add(new Cart(pID, pName, pQuantity, pPrice));
-                TableCart.setItems(cartList);
-            }
 
+            }
+            TableCart.setItems(cartList);
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -180,10 +185,6 @@ public class CartController extends HelpMethods implements Initializable {
         selectCol.setCellValueFactory(new PropertyValueFactory<>("select"));
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        loadData();
-    }
 
     @FXML
     private void removeRecord(Cart c){

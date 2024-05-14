@@ -15,6 +15,8 @@ public class OrderSeller {
         this.purName = purName;
         this.purAddress = purAddress;
         this.money = money;
+        this.viewBtn = new Button("View");
+        this.shipBtn = new Button("Ship");
     }
 
     public int getOID() {
