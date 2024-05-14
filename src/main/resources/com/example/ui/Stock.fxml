@@ -80,15 +80,14 @@
         </AnchorPane>
         <AnchorPane id="mainPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/HomePage.css">
             <children>
-                <TableView layoutX="65.0" layoutY="69.0" prefHeight="450.0" prefWidth="1070.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
+                <TableView fx:id="stockTable" layoutX="65.0" layoutY="69.0" prefHeight="450.0" prefWidth="1070.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
                     <columns>
-                        <TableColumn prefWidth="120.0" text="Picture" />
-                        <TableColumn prefWidth="120.0" text="ProductID" />
-                        <TableColumn prefWidth="180.0" text="Name" />
-                        <TableColumn prefWidth="150.0" text="Type" />
-                        <TableColumn prefWidth="150.0" text="Price" />
-                        <TableColumn prefWidth="150.0" text="Quantity" />
-                        <TableColumn prefWidth="200.0" text="Action" />
+                        <TableColumn fx:id="pidcol" prefWidth="120.0" text="ProductID" />
+                        <TableColumn fx:id="pnamecol" prefWidth="180.0" text="Name" />
+                        <TableColumn fx:id="typecol" prefWidth="170.0" text="Type" />
+                        <TableColumn fx:id="pricecol" prefWidth="200.0" text="Price" />
+                        <TableColumn fx:id="quantitycol" prefWidth="150.0" text="Quantity" />
+                        <TableColumn fx:id="actioncol" prefWidth="250.0" text="Action" />
                     </columns>
                 </TableView>
                 <Label layoutX="560.0" layoutY="14.0" styleClass="largeLabel" stylesheets="@css/table_view.css" text="Stock" />

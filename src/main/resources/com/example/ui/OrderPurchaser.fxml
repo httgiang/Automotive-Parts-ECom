@@ -9,7 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.OrderSellerController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.OrderPurchaserController">
     <children>
         <AnchorPane id="menuBar" prefHeight="50.0" prefWidth="1200.0" stylesheets="@css/HomePage.css">
             <children>
@@ -50,20 +50,11 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button fx:id="stockButton" layoutX="670.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToStock" styleClass="menuButton" text="Stock">
+                <Button fx:id="cartButton" layoutX="794.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToCart" styleClass="menuButton" text="Cart">
                     <graphic>
                         <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../../pictures/Sell Stock.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button fx:id="shippedButton" layoutX="774.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToShipped" styleClass="menuButton" text="Shipped">
-                    <graphic>
-                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../../../pictures/Delivery.png" />
+                                <Image url="@../../../pictures/Shopping Cart.png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -80,16 +71,16 @@
         </AnchorPane>
         <AnchorPane id="mainPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/HomePage.css">
             <children>
-                <TableView fx:id="TableOrderSel" layoutX="143.0" layoutY="61.0" prefHeight="477.0" prefWidth="902.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
+                <TableView fx:id="TableOrderPur" layoutX="100.0" layoutY="54.0" prefHeight="491.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
                     <columns>
-                        <TableColumn fx:id="colOID" prefWidth="100.0" text="OrderID" />
-                        <TableColumn fx:id="colPurName" prefWidth="229.60000610351562" text="Customer name" />
-                        <TableColumn fx:id="colAdr" prefWidth="262.39996337890625" text="Address" />
-                        <TableColumn fx:id="colMoney" prefWidth="139.20001220703125" text="Money" />
-                        <TableColumn fx:id="colAction" prefWidth="168.79996337890623" text="Action" />
+                        <TableColumn fx:id="colOID" prefWidth="134.40001678466797" text="OrderID" />
+                        <TableColumn fx:id="colSeller" prefWidth="329.5999755859375" text="Seller" />
+                        <TableColumn fx:id="colQuant" prefWidth="228.0" text="Quantity" />
+                        <TableColumn fx:id="colAmount" prefWidth="157.60003662109375" text="Amount" />
+                        <TableColumn fx:id="colAction" prefWidth="151.20001220703125" text="Action" />
                     </columns>
                 </TableView>
-                <Label layoutX="547.0" layoutY="11.0" styleClass="largeLabel" stylesheets="@css/table_view.css" text="Orders" />
+                <Label layoutX="559.0" layoutY="8.0" styleClass="largeLabel" stylesheets="@css/table_view.css" text="Order" />
             </children></AnchorPane>
     </children>
 </AnchorPane>

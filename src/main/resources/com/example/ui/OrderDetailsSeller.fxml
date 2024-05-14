@@ -9,7 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.OrderSellerController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.OrderDetailsSellerController">
     <children>
         <AnchorPane id="menuBar" prefHeight="50.0" prefWidth="1200.0" stylesheets="@css/HomePage.css">
             <children>
@@ -50,20 +50,11 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button fx:id="stockButton" layoutX="670.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToStock" styleClass="menuButton" text="Stock">
+                <Button fx:id="cartButton" layoutX="794.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToCart" styleClass="menuButton" text="Cart">
                     <graphic>
                         <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../../pictures/Sell Stock.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button fx:id="shippedButton" layoutX="774.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToShipped" styleClass="menuButton" text="Shipped">
-                    <graphic>
-                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../../../pictures/Delivery.png" />
+                                <Image url="@../../../pictures/Shopping Cart.png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -80,16 +71,17 @@
         </AnchorPane>
         <AnchorPane id="mainPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/HomePage.css">
             <children>
-                <TableView fx:id="TableOrderSel" layoutX="143.0" layoutY="61.0" prefHeight="477.0" prefWidth="902.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
+                <TableView fx:id="TableOD" layoutX="189.0" layoutY="75.0" prefHeight="467.0" prefWidth="821.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
                     <columns>
-                        <TableColumn fx:id="colOID" prefWidth="100.0" text="OrderID" />
-                        <TableColumn fx:id="colPurName" prefWidth="229.60000610351562" text="Customer name" />
-                        <TableColumn fx:id="colAdr" prefWidth="262.39996337890625" text="Address" />
-                        <TableColumn fx:id="colMoney" prefWidth="139.20001220703125" text="Money" />
-                        <TableColumn fx:id="colAction" prefWidth="168.79996337890623" text="Action" />
+                        <TableColumn fx:id="colPID" prefWidth="152.8000030517578" text="Product ID" />
+                        <TableColumn fx:id="colPName" prefWidth="373.6000061035156" text="Product Name" />
+                        <TableColumn fx:id="colQuant" prefWidth="134.4000244140625" text="Quantity" />
+                        <TableColumn fx:id="colAmount" prefWidth="163.199951171875" text="Amount" />
                     </columns>
                 </TableView>
-                <Label layoutX="547.0" layoutY="11.0" styleClass="largeLabel" stylesheets="@css/table_view.css" text="Orders" />
+                <Label layoutX="486.0" layoutY="19.0" styleClass="largeLabel" stylesheets="@css/table_view.css" text="Order ID: " />
+            <TextField fx:id="txt_oID" layoutX="610.0" layoutY="8.0" prefHeight="40.0" prefWidth="102.0" style="-fx-font-weight: 700; -fx-text-fill: #314D6E; -fx-font-size: 30px; -fx-background-color: transparent;" styleClass="textField" stylesheets="@css/profile.css" />
+            <Button fx:id="backButton" layoutX="1064.0" layoutY="511.0" mnemonicParsing="false" onAction="#switchToOrder" prefHeight="40.0" prefWidth="82.0" style="-fx-font-size: 16px; -fx-font-weight: 700; -fx-background-color: lightgreen; -fx-text-fill: green; -fx-background-radius: 20px;" stylesheets="@css/login.css" text="BACK" />
             </children></AnchorPane>
     </children>
 </AnchorPane>

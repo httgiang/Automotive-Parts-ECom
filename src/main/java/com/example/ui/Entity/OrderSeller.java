@@ -7,8 +7,6 @@ public class OrderSeller {
     private String purName;
     private String purAddress;
     private float money;
-    private Button viewBtn;
-    private Button shipBtn;
 
     public OrderSeller(int oID, String purName, String purAddress, float money) {
         this.oID = oID;
@@ -47,21 +45,5 @@ public class OrderSeller {
 
     public void setMoney(float money) {
         this.money = money;
-    }
-
-    public Button getViewBtn() {
-        return viewBtn;
-    }
-
-    public void setViewBtn(Button viewBtn) {
-        this.viewBtn = viewBtn;
-    }
-
-    public Button getShipBtn() {
-        return shipBtn;
-    }
-
-    public void setShipBtn(Button shipBtn) {
-        this.shipBtn = shipBtn;
     }
 }
