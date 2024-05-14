@@ -9,7 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.OrderController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.OrderPurchaserController">
     <children>
         <AnchorPane id="menuBar" prefHeight="50.0" prefWidth="1200.0" stylesheets="@css/HomePage.css">
             <children>
@@ -71,16 +71,16 @@
         </AnchorPane>
         <AnchorPane id="mainPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/HomePage.css">
             <children>
-                <TableView fx:id="table" layoutX="173.0" layoutY="54.0" prefHeight="491.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
+                <TableView fx:id="TableOrderPur" layoutX="100.0" layoutY="54.0" prefHeight="491.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
                     <columns>
-                        <TableColumn fx:id="colOID" prefWidth="176.00000762939453" text="OrderID" />
-                        <TableColumn fx:id="colPID" prefWidth="324.7999572753906" text="Product ID" />
-                        <TableColumn fx:id="colPName" prefWidth="200.7999572753906" text="Product Name" />
-                        <TableColumn fx:id="colQuant" prefWidth="145.0" text="Quantity" />
-                        <TableColumn fx:id="colAmount" prefWidth="210.39996337890625" text="Amount" />
+                        <TableColumn fx:id="colOID" prefWidth="134.40001678466797" text="OrderID" />
+                        <TableColumn fx:id="colSeller" prefWidth="329.5999755859375" text="Seller" />
+                        <TableColumn fx:id="colQuant" prefWidth="228.0" text="Quantity" />
+                        <TableColumn fx:id="colAmount" prefWidth="157.60003662109375" text="Amount" />
+                        <TableColumn fx:id="colAction" prefWidth="151.20001220703125" text="Action" />
                     </columns>
                 </TableView>
-                <Label layoutX="507.0" layoutY="7.0" styleClass="largeLabel" stylesheets="@css/table_view.css" text="Order Details" />
+                <Label layoutX="559.0" layoutY="8.0" styleClass="largeLabel" stylesheets="@css/table_view.css" text="Order" />
             </children></AnchorPane>
     </children>
 </AnchorPane>

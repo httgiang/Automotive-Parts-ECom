@@ -65,7 +65,7 @@ public class CartController extends HelpMethods implements Initializable {
         }
 
         if(!productsPaid.isEmpty()){
-            insertValuesIntoOrder();
+            insertValuesIntoOrder(productsPaid);
             insertValuesIntoOrderItems(productsPaid);
             TableCart.getItems().removeAll(productsPaid);
             for(Cart cartRow : productsPaid){
@@ -74,12 +74,13 @@ public class CartController extends HelpMethods implements Initializable {
         }
     }
 
-    private void insertValuesIntoOrder() {
+    private void insertValuesIntoOrder(ObservableList<Cart> prodList) {
         con = SQLConnection.connectDb();
-        String insertOrder = "INSERT INTO ORDERS(purchaserEmail) VALUES(?)";
+        String insertOrder = "INSERT INTO ORDERS(money, purchaserEmail) VALUES(?,?)";
         try {
             pst = con.prepareStatement(insertOrder);
-            pst.setString(1, userEmail);
+            pst.setFloat(1, getAmountMoney(prodList));
+            pst.setString(2, userEmail);
             pst.execute();
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
@@ -89,7 +90,7 @@ public class CartController extends HelpMethods implements Initializable {
     private void insertValuesIntoOrderItems(ObservableList<Cart> prodList) {
         int OID = getOID();
         con = SQLConnection.connectDb();
-        String insertOrderItems = "INSERT INTO ORDER_ITEMS(orderID, productID, quantity) VALUES(?,?,?);";
+        String insertOrderItems = "INSERT INTO ORDER_ITEMS(orderID ,productID, quantity) VALUES(?,?,?);";
 
         try {
             for(Cart prod : prodList) {
@@ -125,7 +126,6 @@ public class CartController extends HelpMethods implements Initializable {
                 int pQuantity = rs.getInt("productQuantity");
                 float pPrice = rs.getFloat("pPrice");
                 cartList.add(new Cart(pID, pName, pQuantity, pPrice));
-
             }
             TableCart.setItems(cartList);
         } catch (Exception e){
@@ -183,6 +183,7 @@ public class CartController extends HelpMethods implements Initializable {
 
         removeCol.setCellFactory(cellFactory);
         selectCol.setCellValueFactory(new PropertyValueFactory<>("select"));
+
     }
 
 
@@ -216,6 +217,16 @@ public class CartController extends HelpMethods implements Initializable {
             e.printStackTrace();
         }
         return OID;
+    }
+
+    private float getAmountMoney(ObservableList<Cart> prodList){
+        float amount = 0;
+        float sumAmount = 0;
+        for(Cart cartRow : prodList){
+            amount = cartRow.getAmount();
+            sumAmount += amount;
+        }
+        return sumAmount;
     }
 }
 
