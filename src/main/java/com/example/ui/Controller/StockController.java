@@ -1,5 +1,6 @@
 package com.example.ui.Controller;
 import com.example.ui.Entity.Stock;
+import com.example.ui.Entity.User;
 import com.example.ui.SQLConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -27,7 +28,7 @@ public class StockController extends HelpMethods implements Initializable{
     @FXML
     private TableView<Stock> stockTable;
     @FXML
-    private TableColumn<Stock, Button> actioncol;
+    private TableColumn<Stock,String> actioncol;
 
 
     @FXML
@@ -50,6 +51,7 @@ public class StockController extends HelpMethods implements Initializable{
     ObservableList<Stock> stock = FXCollections.observableArrayList();
     @FXML
     private Button addProductButton;
+    String email = User.getInstance().getEmail();
 
 
     @FXML
@@ -61,13 +63,15 @@ public class StockController extends HelpMethods implements Initializable{
     public void initialize(URL url, ResourceBundle resourceBundle) {
         connection = SQLConnection.connectDb();
         loadDataFromDatabase();
+        stockTable.setItems(stock);
         setCellTable();
     }
 
     private void loadDataFromDatabase() {
         try{
             stock.clear();
-            pst = connection.prepareStatement("Select productID, sellerEmail, pName, pType, pPrice, pStockQuantity from PRODUCTS");
+            pst = connection.prepareStatement("Select productID, sellerEmail, pName, pType, pPrice, pStockQuantity from PRODUCTS where sellerEmail =?");
+            pst.setString(1, email);
             rs= pst.executeQuery();
             while(rs.next()){
                 //float price = rs.getFloat("pPrice");
@@ -77,6 +81,7 @@ public class StockController extends HelpMethods implements Initializable{
                         rs.getFloat ("pPrice"),
                         rs.getString("pType")
                         ));
+
             }
         }
         catch (SQLException e) {
@@ -84,11 +89,11 @@ public class StockController extends HelpMethods implements Initializable{
         }
     }
     private void setCellTable(){
-        typecol.setCellValueFactory(new PropertyValueFactory<>("type"));
         pidcol.setCellValueFactory(new PropertyValueFactory<>("pID"));
         pnamecol.setCellValueFactory(new PropertyValueFactory<>("pName"));
         quantitycol.setCellValueFactory(new PropertyValueFactory<>("quantity"));
-        pricecol.setCellValueFactory(new PropertyValueFactory<>("dateOfBirth"));//tên trong patient class
+        typecol.setCellValueFactory(new PropertyValueFactory<>("type"));
+        pricecol.setCellValueFactory(new PropertyValueFactory<>("price"));//tên trong patient class
         Callback<TableColumn<Stock, String>, TableCell<Stock, String>> cellFactory = new Callback<TableColumn<Stock, String>, TableCell<Stock, String>>() {
             @Override
             public TableCell<Stock, String> call(final TableColumn<Stock, String> param) {
@@ -126,6 +131,7 @@ public class StockController extends HelpMethods implements Initializable{
                 return cell;
             }
         };
+        actioncol.setCellFactory(cellFactory);
     }
     @FXML
     private void removeRecord(Stock c){
@@ -144,9 +150,9 @@ public class StockController extends HelpMethods implements Initializable{
 
     private void refreshTable() {
         stock.clear();
-        String query = " Select productID, sellerEmail, pName, pType, pPrice, pStockQuantity from PRODUCTS";
         try{
-            pst = connection.prepareStatement(query);
+            pst = connection.prepareStatement("Select productID, sellerEmail, pName, pType, pPrice, pStockQuantity from PRODUCTS where sellerEmail =?");
+            pst.setString(1, email);
             rs = pst.executeQuery();
 
             while(rs.next()){
