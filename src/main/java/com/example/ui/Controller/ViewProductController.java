@@ -19,8 +19,9 @@ public class ViewProductController extends HelpMethods {
     private Alert alert;
     PreparedStatement pst = null;
     private int productID;
+
     @FXML
-    private TextField txt_productID;
+    private TextField txt_pID;
 
     @FXML
     private TextField txt_pName;
@@ -43,6 +44,11 @@ public class ViewProductController extends HelpMethods {
     @FXML
     private ImageView productImg;
 
+    @FXML
+    private Button updateProductButton;
+
+    @FXML
+    private Button addToCartButton;
 
     public void setProductID(int productID) {
         this.productID = productID;
@@ -56,9 +62,12 @@ public class ViewProductController extends HelpMethods {
             String sql = "SELECT * FROM PRODUCTS WHERE productID = ?";
             assert con != null;
             PreparedStatement pst = con.prepareStatement(sql);
+
             pst.setInt(1, productID);
+
             ResultSet rs = pst.executeQuery();
             if (rs.next()) {
+                txt_pID.setText(String.valueOf((rs.getInt("productID"))));
                 txt_pName.setText(rs.getString("pName"));
                 txt_pType.setText(rs.getString("pType"));
                 txt_pPrice.setText(String.valueOf((rs.getInt("pPrice"))));
@@ -78,7 +87,7 @@ public class ViewProductController extends HelpMethods {
             alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error Message");
             alert.setHeaderText(null);
-            alert.setContentText("Please fill in the Product Quantity!");
+            alert.setContentText("Please fill in the 'Product Quantity'!");
             alert.showAndWait();
         } else {
             String purchaserEmail = User.getInstance().getEmail();
@@ -97,6 +106,28 @@ public class ViewProductController extends HelpMethods {
             }
         }
     }
+
+    private void updateProduct() {
+        try {
+            Connection con = SQLConnection.connectDb();
+            assert con != null;
+            String sql = "UPDATE PRODUCTS SET productID = ?, pName = ?, pType = ?, pPrice = ?, pStockQuantity = ?, pInfor = ?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, txt_pID.getText());
+            pst.setString(2, txt_pName.getText());
+            pst.setString(3, txt_pType.getText());
+            pst.setDouble(4, (Double.parseDouble(txt_pPrice.getText())));
+            pst.setInt(5, (Integer.parseInt(txt_pStockQuantity.getText())));
+            pst.setString(6, txt_pInfo.getText());
+
+            pst.execute();
+
+            JOptionPane.showMessageDialog(null, "Update successfully!");
+        } catch (Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
+
 
 }
 
