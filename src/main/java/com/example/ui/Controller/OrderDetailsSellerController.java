@@ -48,7 +48,6 @@ public class OrderDetailsSellerController extends HelpMethods {
     public void setOID(int oID){
         this.txt_oID.setText("#" + oID);
         loadData(oID);
-        updateStockQuantity();
     }
 
     private void loadData(int oID) {
@@ -81,47 +80,11 @@ public class OrderDetailsSellerController extends HelpMethods {
                 float pPrice = rs.getFloat("pPrice");
                 ordList.add(new OrderDetails(pID, pName, quantity, pPrice));
             }
-
             TableOD.setItems(ordList);
         } catch (Exception e){
             e.printStackTrace();
         }
     }
 
-    private int findOldStockQuant(int pID){
-        con = SQLConnection.connectDb();
-        int stockQuant = 0;
-        String selectStockQuant = "SELECT P.pStockQuantity " +
-                "FROM PRODUCTS P " +
-                "WHERE P.productID = ?";
-        try {
-            pst = con.prepareStatement(selectStockQuant);
-            pst.setInt(1, pID);
-            rs = pst.executeQuery();
-            if(rs.next()){
-                stockQuant = rs.getInt("pStockQuantity");
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return stockQuant;
-    }
 
-    private void updateStockQuantity(){
-        for(OrderDetails ord : ordList){
-            int oldStockQuant = findOldStockQuant(ord.getPID());
-            int newStockQuant = oldStockQuant - ord.getQuantity();
-            String updateStockQuant = "UPDATE PRODUCTS " +
-                    "SET pStockQuantity = ? " +
-                    "WHERE productID = ?";
-            try {
-                pst = con.prepareStatement(updateStockQuant);
-                pst.setInt(1, newStockQuant);
-                pst.setInt(2, ord.getPID());
-                pst.executeUpdate();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
 }

@@ -71,7 +71,7 @@
         </AnchorPane>
         <AnchorPane id="mainPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/HomePage.css">
             <children>
-                <TableView fx:id="TableOD" layoutX="189.0" layoutY="75.0" prefHeight="467.0" prefWidth="821.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
+                <TableView fx:id="TableOD" layoutX="144.0" layoutY="74.0" prefHeight="467.0" prefWidth="821.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
                     <columns>
                         <TableColumn fx:id="colPID" prefWidth="152.8000030517578" text="Product ID" />
                         <TableColumn fx:id="colPName" prefWidth="373.6000061035156" text="Product Name" />
@@ -79,9 +79,9 @@
                         <TableColumn fx:id="colAmount" prefWidth="163.199951171875" text="Amount" />
                     </columns>
                 </TableView>
-                <Label layoutX="486.0" layoutY="19.0" styleClass="largeLabel" stylesheets="@css/table_view.css" text="Order ID: " />
+                <Label layoutX="485.0" layoutY="18.0" styleClass="largeLabel" stylesheets="@css/table_view.css" text="Order ID: " />
             <TextField fx:id="txt_oID" layoutX="610.0" layoutY="8.0" prefHeight="40.0" prefWidth="102.0" style="-fx-font-weight: 700; -fx-text-fill: #314D6E; -fx-font-size: 30px; -fx-background-color: transparent;" styleClass="textField" stylesheets="@css/profile.css" />
-            <Button fx:id="backButton" layoutX="1064.0" layoutY="511.0" mnemonicParsing="false" onAction="#switchToOrder" prefHeight="40.0" prefWidth="82.0" style="-fx-font-size: 16px; -fx-font-weight: 700; -fx-background-color: lightgreen; -fx-text-fill: green; -fx-background-radius: 20px;" stylesheets="@css/login.css" text="BACK" />
+            <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToOrder" prefHeight="40.0" prefWidth="82.0" style="-fx-font-size: 16px; -fx-font-weight: 700; -fx-background-color: lightgreen; -fx-text-fill: green; -fx-background-radius: 20px;" stylesheets="@css/login.css" text="BACK" />
             </children></AnchorPane>
     </children>
 </AnchorPane>

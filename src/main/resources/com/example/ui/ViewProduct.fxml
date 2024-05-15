@@ -78,7 +78,7 @@
                 <TextField fx:id="txt_pName" layoutX="719.0" layoutY="70.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
                 <TextField fx:id="txt_pType" layoutX="719.0" layoutY="130.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
                 <TextField fx:id="txt_pPrice" layoutX="719.0" layoutY="190.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <TextArea fx:id="txt_pInfo" layoutX="717.0" layoutY="308.0" prefHeight="130.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <TextArea fx:id="txt_pInfo" layoutX="717.0" layoutY="308.0" prefHeight="130.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" wrapText="true" />
                 <ImageView fx:id="productImg" fitHeight="355.0" fitWidth="380.0" layoutX="56.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../../pictures/Product.png" />
