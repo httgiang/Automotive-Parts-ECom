@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 import javax.swing.*;
 import java.io.ByteArrayInputStream;
@@ -19,8 +20,10 @@ public class ViewProductController extends HelpMethods {
     private Alert alert;
     PreparedStatement pst = null;
     private int productID;
+
+
     @FXML
-    private TextField txt_productID;
+    private TextField txt_pID;
 
     @FXML
     private TextField txt_pName;
@@ -42,7 +45,11 @@ public class ViewProductController extends HelpMethods {
 
     @FXML
     private ImageView productImg;
-
+    @FXML
+    private AnchorPane rootPur;
+    @FXML
+    private AnchorPane rootSel;
+    String userType = User.getInstance().getType();
 
     public void setProductID(int productID) {
         this.productID = productID;
@@ -50,15 +57,24 @@ public class ViewProductController extends HelpMethods {
     }
 
     public void showProductInformation(int productID) {
+        if(userType.equals("Purchaser")){
+            setUneditable(rootPur);
+            setEditable(txt_selectQuantity);
+        } else {
+            setUneditable(rootSel);
+        }
         try {
             Connection con = SQLConnection.connectDb();
             System.out.println(productID);
             String sql = "SELECT * FROM PRODUCTS WHERE productID = ?";
             assert con != null;
             PreparedStatement pst = con.prepareStatement(sql);
+
             pst.setInt(1, productID);
+
             ResultSet rs = pst.executeQuery();
             if (rs.next()) {
+                txt_pID.setText(String.valueOf((rs.getInt("productID"))));
                 txt_pName.setText(rs.getString("pName"));
                 txt_pType.setText(rs.getString("pType"));
                 txt_pPrice.setText(String.valueOf((rs.getInt("pPrice"))));
@@ -78,7 +94,7 @@ public class ViewProductController extends HelpMethods {
             alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error Message");
             alert.setHeaderText(null);
-            alert.setContentText("Please fill in the Product Quantity!");
+            alert.setContentText("Please fill in the 'Product Quantity'!");
             alert.showAndWait();
         } else {
             String purchaserEmail = User.getInstance().getEmail();
@@ -97,6 +113,36 @@ public class ViewProductController extends HelpMethods {
             }
         }
     }
+
+    @FXML
+    private void updateProduct() {
+        if(userType.equals("Purchaser")){
+            setEditable(rootPur);
+        } else {
+            setEditable(rootSel);
+        }
+        setUneditable(txt_pID);
+        try {
+            Connection con = SQLConnection.connectDb();
+            assert con != null;
+            String sql = "UPDATE PRODUCTS SET pName = ?, pType = ?, pPrice = ?, pStockQuantity = ?, pInfo = ? " +
+                    "WHERE productID = ?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, txt_pName.getText());
+            pst.setString(2, txt_pType.getText());
+            pst.setDouble(3, (Double.parseDouble(txt_pPrice.getText())));
+            pst.setInt(4, (Integer.parseInt(txt_pStockQuantity.getText())));
+            pst.setString(5, txt_pInfo.getText());
+            pst.setInt(6, Integer.parseInt(txt_pID.getText()));
+
+            pst.execute();
+
+            JOptionPane.showMessageDialog(null, "Update successfully!");
+        } catch (Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
+
 
 }
 

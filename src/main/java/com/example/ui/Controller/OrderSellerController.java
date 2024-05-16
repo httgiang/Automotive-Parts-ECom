@@ -80,7 +80,6 @@ public class OrderSellerController extends HelpMethods implements Initializable 
                 float money = rs.getFloat("money");
                 ordList.add(new OrderSeller(oID, pName, address, money));
             }
-
             TableOrderSel.setItems(ordList);
         } catch (Exception e){
             e.printStackTrace();

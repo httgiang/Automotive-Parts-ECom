@@ -48,9 +48,16 @@ public class ProfilePageController extends HelpMethods {
     private AnchorPane rootPur;
     @FXML
     private AnchorPane rootSel;
+    String userType = User.getInstance().getType();
+    String userEmail = User.getInstance().getEmail();
 
     @FXML
     private void updateInformation(){
+        if(userType.equals("Purchaser")){
+            setEditable(rootPur);
+        } else {
+            setEditable(rootSel);
+        }
         try {
             Connection con = SQLConnection.connectDb();
             assert con != null;
@@ -62,7 +69,6 @@ public class ProfilePageController extends HelpMethods {
             pst.setInt(4, (Integer.parseInt(txt_pincode.getText())));
             pst.execute();
 
-            JOptionPane.showMessageDialog(null, "Update successfully!");
         } catch (Exception e){
             JOptionPane.showMessageDialog(null, e);
         }
@@ -70,8 +76,6 @@ public class ProfilePageController extends HelpMethods {
 
     private void showUserInformation(){
         try {
-            String userEmail = User.getInstance().getEmail();
-            String userType = User.getInstance().getType();
             Connection con = SQLConnection.connectDb();
             String sql = "SELECT * FROM ACCOUNTS WHERE email = ?";
             assert con != null;
@@ -85,30 +89,27 @@ public class ProfilePageController extends HelpMethods {
                 txt_pincode.setText(String.valueOf((rs.getInt("pincode"))));
 
                 if (userType.equals("Purchaser")) {
+                    setUneditable(rootPur);
                     String queryPurchaser = "SELECT * FROM PURCHASERS WHERE purchaserEmail = ?";
                     pst = con.prepareStatement(queryPurchaser);
                     pst.setString(1, userEmail);
                     rs = pst.executeQuery();
                     if (rs.next()) {
-                        setUneditable(rootPur);
                         txt_address.setText(rs.getString("address"));
                     }
 
                 } else {
+                    setUneditable(rootSel);
                     String querySeller = "SELECT * FROM SELLERS WHERE sellerEmail = ?";
                     pst = con.prepareStatement(querySeller);
                     pst.setString(1, userEmail);
                     rs = pst.executeQuery();
 
                     if (rs.next()) {
-                        setUneditable(rootSel);
                         txt_info.setText(rs.getString("sellerInfo"));
                         txt_bank.setText(rs.getString("sellerBankAccount"));
                     }
                 }
-
-
-
             }
             JOptionPane.showMessageDialog(null, "Successfully show info!");
         } catch (Exception e){

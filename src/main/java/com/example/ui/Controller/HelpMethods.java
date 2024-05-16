@@ -94,6 +94,17 @@ public class HelpMethods {
         });
     }
 
+    public static void setEditable(Node root) {
+        root.lookupAll(".text-field").forEach(node -> {
+            if (node instanceof TextField) {
+                ((TextField) node).setEditable(true);
+            }
+            if (node instanceof TextArea){
+                ((TextArea) node).setEditable(true);
+            }
+        });
+    }
+
     public void showProductImg(ImageView imageView, ResultSet rs) throws SQLException {
         byte[] imgData = rs.getBytes("pImage");
         if(imgData != null){
