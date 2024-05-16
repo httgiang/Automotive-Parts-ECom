@@ -9,13 +9,13 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.OrderController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.MainPageController">
     <children>
         <AnchorPane id="menuBar" prefHeight="50.0" prefWidth="1200.0" stylesheets="@css/HomePage.css">
             <children>
-                <Button fx:id="homeButton" layoutY="6.0" mnemonicParsing="false" onAction="#switchToHome" styleClass="menuButton">
+                <Button layoutY="6.0" mnemonicParsing="false" styleClass="menuButton">
                     <graphic>
-                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="homeButton" fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../pictures/Home Page.png" />
                             </image>
@@ -23,7 +23,7 @@
                     </graphic>
                 </Button>
                 <Label layoutX="40.0" layoutY="14.0" styleClass="menuLabel" text="Automotive Parts Website" />
-                <Button fx:id="logOutButton" layoutX="1094.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToLogout" styleClass="menuButton" text="Logout">
+                <Button fx:id="logOutButton" layoutX="1094.0" layoutY="7.0" mnemonicParsing="false" styleClass="menuButton" text="Logout">
                     <graphic>
                         <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -50,7 +50,7 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button fx:id="cartButton" layoutX="794.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToCart" styleClass="menuButton" text="Cart">
+                <Button fx:id="cartButton" layoutX="794.0" layoutY="7.0" mnemonicParsing="false" styleClass="menuButton" text="Cart">
                     <graphic>
                         <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -71,17 +71,18 @@
         </AnchorPane>
         <AnchorPane id="mainPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/HomePage.css">
             <children>
-                <TableView fx:id="table" layoutX="173.0" layoutY="54.0" prefHeight="491.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
+                <TableView layoutY="77.0" prefHeight="442.0" prefWidth="1200.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
                     <columns>
-                        <TableColumn fx:id="colOID" prefWidth="176.00000762939453" text="OrderID" />
-                        <TableColumn fx:id="colPID" prefWidth="160.0" text="Product ID" />
-                        <TableColumn fx:id="colPName" prefWidth="160.0" text="Product Name" />
-                        <TableColumn fx:id="colQuant" prefWidth="145.0" text="Quantity" />
-                        <TableColumn fx:id="colAmount" prefWidth="210.39996337890625" text="Amount" />
-                  <TableColumn fx:id="statusCol" prefWidth="147.0" text="Status" />
+                        <TableColumn prefWidth="100.0" text="Picture" />
+                        <TableColumn prefWidth="389.6000213623047" text="Product" />
+                        <TableColumn prefWidth="160.79998779296875" text="Order Id" />
+                        <TableColumn prefWidth="100.0" text="Quantity" />
+                        <TableColumn prefWidth="150.0" text="Price" />
+                        <TableColumn prefWidth="150.0" text="Time" />
+                        <TableColumn prefWidth="150.0" text="Status" />
                     </columns>
                 </TableView>
-                <Label layoutX="507.0" layoutY="7.0" styleClass="largeLabel" stylesheets="@css/table_view.css" text="Order Details" />
+                <Label id="CartName" layoutX="495.0" layoutY="22.0" maxWidth="269.0" prefHeight="54.0" prefWidth="193.0" styleClass="largeLabel" stylesheets="@css/table_view.css" text="Order Details" />
             </children></AnchorPane>
     </children>
 </AnchorPane>

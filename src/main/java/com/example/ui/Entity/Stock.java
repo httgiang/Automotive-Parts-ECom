@@ -8,7 +8,7 @@ public class Stock {
     private String pName;
     private Integer quantity;
     private String type;
-    private Float amount;
+    private Float price;
     private Button removeButton;
 
     private CheckBox action;
@@ -17,9 +17,19 @@ public class Stock {
         return pID;
     }
 
-    public String getpName() {
+    public String getPName() {
         return pName;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public Float getPrice() {
+        return price;
+    }
+
+
     public CheckBox getSelect() {
         return action;
     }
@@ -31,7 +41,7 @@ public class Stock {
         this.pID = pID;
         this.pName = pName;
         this.quantity = quantity; //num of products of the same type
-        this.amount = price * quantity;
+        this.price = price;
         this.type = type;
         this.removeButton = new Button("remove");
         this.action = new CheckBox();

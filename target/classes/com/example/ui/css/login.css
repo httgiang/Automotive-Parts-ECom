@@ -1,0 +1,179 @@
+.largeLabel{
+    -fx-position: absolute;
+    -fx-width: 181px;
+    -fx-height: 54px;
+    -fx-left: 305px;
+    -fx-top: 240px;
+
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-font-size: 36px;
+    -fx-line-height: 54px;
+
+    -fx-text-fill: #272C98;
+}
+
+.normalLabel{
+    -fx-position: absolute;
+    -fx-left: 304px;
+    -fx-top: 500px;
+
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-font-size: 16px;
+    -fx-line-height: 24px;
+
+    -fx-text-fill: #000000;
+}
+
+.normalText{
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-font-size: 14px;
+    -fx-line-height: 21px;
+
+    -fx-text-fill: #000000;
+
+
+}
+.textField{
+    -fx-position: absolute;
+    -fx-width: 478px;
+    -fx-height: 46px;
+    -fx-left: 304px;
+    -fx-top: 531px;
+
+    -fx-background-color: #EFF8FF;
+    -fx-border-radius: 5px 5px 5px 5px;
+}
+
+
+#anchorPane{
+    -fx-position: absolute;
+    -fx-width: 598px;
+    -fx-height: 747px;
+    -fx-left: 244px;
+    -fx-top: 167px;
+
+    -fx-background-color: #FFFFFF;
+    -fx-box-shadow: 0px 19px 40px 10px;
+    -fx-border-radius: 20px 20px 20px 20px;
+}
+
+#welcomeBack{
+    -fx-position: absolute;
+    -fx-width: 145px;
+    -fx-height: 22px;
+    -fx-left: 310px;
+    -fx-top: 354px;
+
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-font-size: 16px;
+    -fx-line-height: 22px;
+    -fx-letter-spacing: 0.03em;
+
+    -fx-text-fill: rgba(0, 0, 0, 0.5);
+
+}
+
+#signIn{
+    -fx-position: absolute;
+    -fx-width: 191px;
+    -fx-height: 84px;
+    -fx-left: 305px;
+    -fx-top: 386px;
+
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-font-size: 56px;
+    -fx-line-height: 84px;
+
+    -fx-text-fill: #000000;
+}
+
+#su_signUpButton, #li_logInButton {
+    -fx-background-color: #272C98;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 27px;
+    -fx-min-width: 250px;
+    -fx-max-width: 250px;
+    -fx-min-height: 40px;
+    -fx-max-height: 40px;
+    -fx-background-radius: 40px 40px 40px 40px;
+    -fx-opacity: 10;
+    -fx-gap: 10;
+}
+
+#su_logInButton, #li_signUpButton{
+    -fx-position: absolute;
+    -fx-width: 200px;
+    -fx-height: 46px;
+    -fx-left: 468px;
+    -fx-top: 714px;
+    -fx-font-size: 16px;
+    -fx-text-fill: #272C98;
+    -fx-background-color: transparent;
+
+}
+
+#forgotPassword{
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-font-size: 16px;
+    -fx-line-height: 22px;
+    /* identical to box height, or 138% */
+    -fx-letter-spacing: 0.03em;
+
+    -fx-text-fill: rgba(0, 0, 0, 0.5);
+    -fx-background-color: transparent;
+}
+
+#dontHaveAcc{
+    /* I don’t have an account ? Sign up */
+
+    -fx-position: absolute;
+    -fx-width: 282px;
+    -fx-height: 22px;
+    -fx-left: 404px;
+    -fx-top: 800px;
+
+    -fx-font-family: 'Poppins';
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-font-size: 16px;
+    -fx-line-height: 22px;
+    /* identical to box height, or 138% */
+    -fx-letter-spacing: 0.03em;
+
+    -fx-text-fill: rgba(0, 0, 0, 0.2);
+
+}
+
+
+    #signUpButton{
+        -fx-position: absolute;
+        -fx-width: 200px;
+        -fx-height: 46px;
+        -fx-left: 468px;
+        -fx-top: 714px;
+
+        -fx-background-color: #F47458;
+        -fx-border-radius: 23px;
+        -fx-font-family: 'Poppins';
+        -fx-font-style: normal;
+        -fx-font-weight: 600;
+        -fx-font-size: 16px;
+        -fx-line-height: 24px;
+        /* identical to box height */
+        -fx-text-transform: uppercase;
+
+        -fx-text-fill: #FFFFFF;
+    }

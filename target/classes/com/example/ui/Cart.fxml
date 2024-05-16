@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -8,8 +9,9 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.OrderController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.CartController">
     <children>
         <AnchorPane id="menuBar" prefHeight="50.0" prefWidth="1200.0" stylesheets="@css/HomePage.css">
             <children>
@@ -41,7 +43,7 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button fx:id="orderButton" layoutX="894.0" layoutY="7.0" mnemonicParsing="false" styleClass="menuButton" text="Order">
+                <Button fx:id="orderButton" layoutX="894.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToOrder" styleClass="menuButton" text="Order">
                     <graphic>
                         <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -50,7 +52,7 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button fx:id="cartButton" layoutX="794.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToCart" styleClass="menuButton" text="Cart">
+                <Button fx:id="cartButton" layoutX="794.0" layoutY="7.0" mnemonicParsing="false" styleClass="menuButton" text="Cart">
                     <graphic>
                         <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -71,17 +73,32 @@
         </AnchorPane>
         <AnchorPane id="mainPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/HomePage.css">
             <children>
-                <TableView fx:id="table" layoutX="173.0" layoutY="54.0" prefHeight="491.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
+                <TableView fx:id="TableCart" layoutX="124.0" layoutY="60.0" prefHeight="427.0" prefWidth="940.0" style="-fx-background-color: white;" stylesheets="@css/table_view.css">
                     <columns>
-                        <TableColumn fx:id="colOID" prefWidth="176.00000762939453" text="OrderID" />
-                        <TableColumn fx:id="colPID" prefWidth="160.0" text="Product ID" />
-                        <TableColumn fx:id="colPName" prefWidth="160.0" text="Product Name" />
-                        <TableColumn fx:id="colQuant" prefWidth="145.0" text="Quantity" />
-                        <TableColumn fx:id="colAmount" prefWidth="210.39996337890625" text="Amount" />
-                  <TableColumn fx:id="statusCol" prefWidth="147.0" text="Status" />
+                        <TableColumn fx:id="pIDCol" prefWidth="120.0" text="ProductID" />
+                        <TableColumn fx:id="pNameCol" prefWidth="370.0" text="Product" />
+                        <TableColumn fx:id="quantityCol" prefWidth="120.0" text="Quantity" />
+                        <TableColumn fx:id="amountCol" prefWidth="130.0" text="Amount" />
+                        <TableColumn fx:id="removeCol" prefWidth="100.0" text="Remove" />
+                        <TableColumn fx:id="selectCol" prefWidth="100.0" text="Select" />
                     </columns>
+               <styleClass>
+                  <String fx:value="table-row-cell" />
+                  <String fx:value="table-row-cell-odd" />
+                  <String fx:value="table-view" />
+               </styleClass>
                 </TableView>
-                <Label layoutX="507.0" layoutY="7.0" styleClass="largeLabel" stylesheets="@css/table_view.css" text="Order Details" />
+                <Label layoutX="521.0" layoutY="14.0" styleClass="largeLabel" stylesheets="@css/table_view.css" text="Cart Items" />
+            <Button fx:id="cancelButton" layoutX="785.0" layoutY="525.0" mnemonicParsing="false" style="-fx-background-color: lightgrey; -fx-font-weight: 700; -fx-text-fill: black;" text="Cancel">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="payNowButton" layoutX="887.0" layoutY="525.0" mnemonicParsing="false" onAction="#onPayNowButtonClicked" style="-fx-background-color: lightgreen; -fx-font-weight: 700;" text="Pay now">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
             </children></AnchorPane>
     </children>
 </AnchorPane>
