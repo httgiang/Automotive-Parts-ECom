@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 import javax.swing.*;
 import java.io.ByteArrayInputStream;
@@ -19,6 +20,7 @@ public class ViewProductController extends HelpMethods {
     private Alert alert;
     PreparedStatement pst = null;
     private int productID;
+
 
     @FXML
     private TextField txt_pID;
@@ -43,12 +45,11 @@ public class ViewProductController extends HelpMethods {
 
     @FXML
     private ImageView productImg;
-
     @FXML
-    private Button updateProductButton;
-
+    private AnchorPane rootPur;
     @FXML
-    private Button addToCartButton;
+    private AnchorPane rootSel;
+    String userType = User.getInstance().getType();
 
     public void setProductID(int productID) {
         this.productID = productID;
@@ -56,6 +57,12 @@ public class ViewProductController extends HelpMethods {
     }
 
     public void showProductInformation(int productID) {
+        if(userType.equals("Purchaser")){
+            setUneditable(rootPur);
+            setEditable(txt_selectQuantity);
+        } else {
+            setUneditable(rootSel);
+        }
         try {
             Connection con = SQLConnection.connectDb();
             System.out.println(productID);
@@ -107,18 +114,26 @@ public class ViewProductController extends HelpMethods {
         }
     }
 
+    @FXML
     private void updateProduct() {
+        if(userType.equals("Purchaser")){
+            setEditable(rootPur);
+        } else {
+            setEditable(rootSel);
+        }
+        setUneditable(txt_pID);
         try {
             Connection con = SQLConnection.connectDb();
             assert con != null;
-            String sql = "UPDATE PRODUCTS SET productID = ?, pName = ?, pType = ?, pPrice = ?, pStockQuantity = ?, pInfor = ?";
+            String sql = "UPDATE PRODUCTS SET pName = ?, pType = ?, pPrice = ?, pStockQuantity = ?, pInfo = ? " +
+                    "WHERE productID = ?";
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, txt_pID.getText());
-            pst.setString(2, txt_pName.getText());
-            pst.setString(3, txt_pType.getText());
-            pst.setDouble(4, (Double.parseDouble(txt_pPrice.getText())));
-            pst.setInt(5, (Integer.parseInt(txt_pStockQuantity.getText())));
-            pst.setString(6, txt_pInfo.getText());
+            pst.setString(1, txt_pName.getText());
+            pst.setString(2, txt_pType.getText());
+            pst.setDouble(3, (Double.parseDouble(txt_pPrice.getText())));
+            pst.setInt(4, (Integer.parseInt(txt_pStockQuantity.getText())));
+            pst.setString(5, txt_pInfo.getText());
+            pst.setInt(6, Integer.parseInt(txt_pID.getText()));
 
             pst.execute();
 

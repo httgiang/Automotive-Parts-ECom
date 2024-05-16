@@ -1,4 +1,5 @@
 package com.example.ui.Controller;
+import com.example.ui.Entity.OrderDetails;
 import com.example.ui.Entity.OrderSeller;
 import com.example.ui.Entity.User;
 import com.example.ui.SQLConnection;
@@ -79,7 +80,6 @@ public class OrderSellerController extends HelpMethods implements Initializable 
                 float money = rs.getFloat("money");
                 ordList.add(new OrderSeller(oID, pName, address, money));
             }
-
             TableOrderSel.setItems(ordList);
         } catch (Exception e){
             e.printStackTrace();
@@ -114,6 +114,7 @@ public class OrderSellerController extends HelpMethods implements Initializable 
                             shipBtn.setOnAction((ActionEvent event) -> {
                                 OrderSeller ord = getTableView().getItems().get(getIndex());
                                 onShipButtonClicked(ord.getOID());
+                                updateValues(ord.getOID());
                                 TableOrderSel.getItems().remove(ord);
                             });
                             HBox manageBtn = new HBox(viewBtn, shipBtn);
@@ -154,6 +155,39 @@ public class OrderSellerController extends HelpMethods implements Initializable 
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void updateValues(int oID){
+        String findProduct = "SELECT P.productID, OI.quantity " +
+                "FROM PRODUCTS P, ORDER_ITEMS OI " +
+                "WHERE P.productID = OI.productID " +
+                "AND OI.orderID = ? ";
+        try {
+            pst = con.prepareStatement(findProduct);
+            pst.setInt(1, oID);
+            rs = pst.executeQuery();
+            if(rs.next()){
+                int pID = rs.getInt("productID");
+                int quantity = rs.getInt("quantity");
+                updateStockQuantity(pID, quantity);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void updateStockQuantity(int pID, int quantity){
+        String updateStockQuant = "UPDATE PRODUCTS " +
+                "SET pStockQuantity = pStockQuantity - ? " +
+                "WHERE productID = ?";
+        try {
+            pst = con.prepareStatement(updateStockQuant);
+            pst.setInt(1, quantity);
+            pst.setInt(2, pID);
+            pst.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
         }

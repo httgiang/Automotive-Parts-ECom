@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
@@ -14,11 +9,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.ViewProductController">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui.Controller.ViewProductController">
     <children>
         <AnchorPane id="menuBar" prefHeight="50.0" prefWidth="1200.0" stylesheets="@css/HomePage.css">
             <children>
-                <Button fx:id="homeButton" layoutY="6.0" mnemonicParsing="false" styleClass="menuButton">
+                <Button fx:id="homeButton" layoutY="6.0" mnemonicParsing="false" onAction="#switchToHome" styleClass="menuButton">
                     <graphic>
                         <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -74,30 +69,32 @@
                 <Button fx:id="searchButton" layoutX="763.0" layoutY="95.0" mnemonicParsing="false" style="-fx-font-weight: 700;" text="Search" />
             </children>
         </AnchorPane>
-        <AnchorPane id="mainPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/HomePage.css">
+        <AnchorPane id="mainPane" fx:id="rootPur" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/HomePage.css">
             <children>
-                <Label layoutX="529.0" layoutY="75.0" stylesheets="@css/profile.css" text="Name:" />
-                <Label layoutX="529.0" layoutY="138.0" stylesheets="@css/profile.css" text="Type" />
-                <Label fx:id="labelAddress" layoutX="529.0" layoutY="318.0" stylesheets="@css/profile.css" text="Description:" />
-                <Label layoutX="529.0" layoutY="195.0" stylesheets="@css/profile.css" text="Price:" />
-                <TextField fx:id="txt_pName" layoutX="719.0" layoutY="70.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <TextField fx:id="txt_pType" layoutX="719.0" layoutY="130.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <TextField fx:id="txt_pPrice" layoutX="719.0" layoutY="190.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <TextArea fx:id="txt_pInfo" layoutX="717.0" layoutY="308.0" prefHeight="130.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <Label layoutX="525.0" layoutY="93.0" stylesheets="@css/profile.css" text="Name:" />
+                <Label layoutX="525.0" layoutY="156.0" stylesheets="@css/profile.css" text="Type" />
+                <Label fx:id="labelAddress" layoutX="524.0" layoutY="382.0" stylesheets="@css/profile.css" text="Description:" />
+                <Label layoutX="525.0" layoutY="213.0" stylesheets="@css/profile.css" text="Price:" />
+                <TextField fx:id="txt_pName" layoutX="720.0" layoutY="88.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <TextField fx:id="txt_pType" layoutX="720.0" layoutY="148.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <TextField fx:id="txt_pPrice" layoutX="720.0" layoutY="208.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <TextArea fx:id="txt_pInfo" layoutX="719.0" layoutY="332.0" prefHeight="130.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" wrapText="true" />
                 <ImageView fx:id="productImg" fitHeight="355.0" fitWidth="380.0" layoutX="56.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../../pictures/Product.png" />
                     </image>
                 </ImageView>
-                <TextField fx:id="txt_pStockQuantity" layoutX="717.0" layoutY="248.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <Label layoutX="529.0" layoutY="253.0" stylesheets="@css/profile.css" text="Stock Quantity:" />
-                <Button fx:id="addToCartButton" layoutX="939.0" layoutY="458.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="50.0" prefWidth="201.0" style="-fx-background-color: lightskyblue;" text="ADD TO CART" textFill="#1e377c">
+                <TextField fx:id="txt_pStockQuantity" layoutX="719.0" layoutY="268.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <Label layoutX="526.0" layoutY="273.0" stylesheets="@css/profile.css" text="Stock Quantity:" />
+                <Button fx:id="addToCartButton" layoutX="941.0" layoutY="482.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="50.0" prefWidth="201.0" style="-fx-background-color: lightskyblue;" text="ADD TO CART" textFill="#1e377c">
                     <font>
                         <Font name="System Bold" size="23.0" />
                     </font>
                 </Button>
-                <TextField fx:id="txt_selectQuantity" layoutX="717.0" layoutY="463.0" prefHeight="40.0" prefWidth="87.0" styleClass="textField" stylesheets="@css/profile.css" />
-                <Label fx:id="labelAddress1" layoutX="525.0" layoutY="473.0" stylesheets="@css/profile.css" text="Select Quantity:" />
+                <TextField fx:id="txt_selectQuantity" layoutX="719.0" layoutY="487.0" prefHeight="40.0" prefWidth="87.0" styleClass="textField" stylesheets="@css/profile.css" />
+                <Label fx:id="labelAddress1" layoutX="524.0" layoutY="497.0" stylesheets="@css/profile.css" text="Select Quantity:" />
+            <TextField fx:id="txt_pID" layoutX="718.0" layoutY="32.0" prefHeight="40.0" prefWidth="422.0" styleClass="textField" stylesheets="@css/profile.css" />
+            <Label layoutX="524.0" layoutY="37.0" stylesheets="@css/profile.css" text="Product ID:" />
             </children></AnchorPane>
     </children>
 </AnchorPane>
