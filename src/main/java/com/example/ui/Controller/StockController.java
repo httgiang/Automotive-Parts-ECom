@@ -16,10 +16,7 @@ import javafx.util.Callback;
 import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ResourceBundle;
 
 
@@ -44,7 +41,7 @@ public class StockController extends HelpMethods implements Initializable{
 
     @FXML
     private TableColumn<Stock, Float> pricecol;
-
+    private CallableStatement call = null;
     Connection connection = null;
     ResultSet rs = null;
     PreparedStatement pst = null;
